@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{%= site.locale %}">
+  <head>
+    {%@ "head", metadata: site.metadata, title: data.title %}
+  </head>
+  <body class="{{ data.layout }} {{ data.page_class }}">
+    {%@ Shared::Navbar metadata: site.metadata, resource: resource %}
+    {%@ "menu", metadata: site.metadata %}
+
+    <main id="main" class="flow">
+      {%= yield %}
+    </main>
+
+    {%@ "footer", metadata: site.metadata %}
+  </body>
+</html>

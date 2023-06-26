@@ -1,0 +1,87 @@
+.center {
+    display: grid;
+    place-content: center;
+    align-self: center;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+.flex-col {
+    display: flex;
+    flex-basis: content;
+    flex-grow: 0;
+    flex-direction: column;
+    max-width: fit-content;
+}
+
+.flex-col a {
+    text-align: center;
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-large {
+    font-size: var(--size-step-2);
+}
+
+.text-small {
+    color: var(--color-gray);
+    font-size: var(--size-step-0);
+    font-family: var(--font-sans);
+}
+
+a.text-small {
+    text-decoration-color: var(--color-gray);
+    text-decoration-thickness: 0.1ex;
+}
+
+.text-bold {
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.relative {
+    position: relative;
+}
+
+.round {
+    border-radius: var(--radius-round);
+    width: var(--space-l-xl);
+    height: var(--space-l-xl);
+}
+
+.emoji {
+    display: inline-block;
+    width: 1em;
+}
+
+.text-gray {
+    color: var(--color-gray);
+}
+
+.blog * {
+    font-family: var(--font-sans);
+}
+
+.gritty {
+    color: var(--gray-5);
+    grid-column: 1 / -1;
+    font-size: var(--space-xs-s);
+}
+
+.gritty a:hover {
+    text-decoration-color: var(--gray-5);
+}
