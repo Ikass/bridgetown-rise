@@ -11,6 +11,13 @@ body {
   font-family: var(--font-base);
   line-height: 1.4;
   letter-spacing: var(--tracking);
+  display: flex;
+  flex-direction: column;
+}
+
+/* make the footer 'sticky' */
+main {
+  flex-grow: 1;
 }
 
 /* Base typesetting */
@@ -69,7 +76,7 @@ svg {
   flex: none;
 }
 
-[role='list'] {
+[role="list"] {
   padding: 0;
 }
 
@@ -96,16 +103,16 @@ main:focus {
   outline: none;
 }
 
-article [href^='http']:not([href*='eleventy-excellent.netlify.app'])::after {
+article [href^="http"]:not([href*="eleventy-excellent.netlify.app"])::after {
   display: inline-block;
   inline-size: 1em;
   block-size: 1em;
-  background-image: url('/assets/images/icn-external.svg');
+  background-image: url("/assets/images/icn-external.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60% auto;
   /* alternative text rules */
-  content: '(external link)';
+  content: "(external link)";
   overflow: hidden;
   white-space: nowrap;
   text-indent: 1em; /* the width of the icon */
