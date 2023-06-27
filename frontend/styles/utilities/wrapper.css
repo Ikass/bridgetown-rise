@@ -8,5 +8,4 @@
   max-inline-size: var(--wrapper-max-width, 85rem);
   margin-inline: auto;
   padding-inline: var(--gutter);
-  /* position: relative; */
 }

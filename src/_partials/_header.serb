@@ -1,0 +1,9 @@
+<header class="wrapper relative" role="banner">
+  <div class="site-head ontop">
+   <a href="/" class="logo">
+      {{ metadata.title }}
+    </a>
+
+    {%@ "menu" %}
+  </div>
+</header>

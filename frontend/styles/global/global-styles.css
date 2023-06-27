@@ -103,11 +103,12 @@ main:focus {
   outline: none;
 }
 
-article [href^="http"]:not([href*="eleventy-excellent.netlify.app"])::after {
+article [href^="http"]:not([href*="http://localhost:4000"])::after
+{
   display: inline-block;
   inline-size: 1em;
   block-size: 1em;
-  background-image: url("/assets/images/icn-external.svg");
+  background-image: url("/images/icon-external.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60% auto;

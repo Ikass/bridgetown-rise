@@ -4,12 +4,13 @@
     {%@ "head", metadata: site.metadata, title: data.title %}
   </head>
   <body class="{{ data.layout }} {{ data.page_class }}">
-    {%# Shared::Navbar metadata: site.metadata, resource: resource %}
     {%# "menu", metadata: site.metadata %}
     {%@ "header", metadata: site.metadata %}
 
     <main id="main" class="flow">
-      {%= yield %}
+      <article class="region wrapper prose flow">
+        {%= yield %}
+      </article>
     </main>
 
     {%@ "footer", metadata: site.metadata %}

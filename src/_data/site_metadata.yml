@@ -4,8 +4,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.metadata.myvariable }}.
 
-title: Your awesome title
-tagline: This site is totally awesome
+title: Bridgetown Excellent
+tagline: Bridgetown starter based on the workflow suggested by buildexcellentwebsit.es.
 email: your-email@example.com
 description: >-
-  Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+  Bridgetown starter using modern CSS, fluid type, fluid spacing, flexible layout and progressive enhancement. This will appear in your document head meta (for Google search results) and in your feed.xml site description.

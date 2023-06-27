@@ -4,3 +4,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
+header a {
+  text-decoration: none;
+}
