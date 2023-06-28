@@ -20,11 +20,11 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 
 - Built with [Bridgetown](https://www.bridgetownrb.com)
 - [Remix](https://remixicon.com/) icons
+- [Atkinson Hyperlegible](https://brailleinstitute.org/freefont) typeface for greater legibility and readability for low vision readers, locally served.
 
 ## TODO
 
 - [ ] Accessible, responsive and robust main navigation
-- [ ] @media queries => @container queries
 - [ ] SEO basics
 - [ ] Sitemap
 

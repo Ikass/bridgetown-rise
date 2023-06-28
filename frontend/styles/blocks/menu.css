@@ -116,15 +116,36 @@ nav.navbar [aria-expanded="true"] svg {
   transform: var(--nav-list-rotate, rotate(45deg));
 }
 
+@media (width <= 35em) {
+  #main-nav ul {
+    display: none;
+  }
+}
+
+@media (width >= 35em) {
+  #hamburger {
+    --nav-button-display: none;
+  }
+}
+
 #hamburger {
   flex: 0 0 auto;
-  display: flex;
+  display: var(--nav-button-display, flex);
   align-items: center;
   gap: 0.5em;
+  align-items: center;
+  align-content: center;
+  align-self: center;
 }
 
 #hamburger > span::after {
-  display: flex;
+  /* display: flex;
+  align-items: center;
+  align-content: center;
+  align-self: center; */
+  display: grid;
+  place-content: center;
+  align-content: center;
   align-self: center;
   content: url(/images/svg/menu-line.svg);
 }

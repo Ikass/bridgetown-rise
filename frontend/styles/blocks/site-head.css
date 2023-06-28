@@ -1,10 +1,23 @@
-.site-head {
+body > header nav {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  gap: var(--gutter);
+  /* container: main-nav / inline-size; */
+}
+
+body > header nav ul {
+  display: flex;
+  gap: var(--gutter);
+  list-style: none;
 }
 
 header a {
   text-decoration: none;
+}
+
+.site-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gutter);
+  justify-content: space-between;
 }

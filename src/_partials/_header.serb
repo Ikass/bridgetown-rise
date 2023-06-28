@@ -1,5 +1,5 @@
-<header class="wrapper" role="banner">
-  <div class="site-head">
+<header class="" role="banner">
+  <div class="site-head wrapper">
    <a href="/" class="logo">
       {{ metadata.title }}
     </a>
