@@ -97,23 +97,22 @@ nav.navbar button {
   padding: var(--space-xs) 0;
 }
 
-nav.navbar span {
-  font-size: var(--size-step-min-1);
-  font-weight: bold;
-  text-transform: uppercase;
-  padding-inline-end: var(--space-2xs);
-}
+/* Custom */
 
-nav.navbar svg {
-  block-size: 100%;
-  inline-size: auto;
-}
-header svg {
-  transform: translateY(-0.1em);
-}
-
-nav.navbar [aria-expanded="true"] svg {
-  transform: var(--nav-list-rotate, rotate(45deg));
+@media (width >= 35em) {
+  #main-nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .main-nav {
+    grid-column: 2;
+  }
+  #hamburger {
+    display: none;
+  }
+  .js-enabled .main-nav {
+    display: flex;
+  }
 }
 
 @media (width <= 35em) {

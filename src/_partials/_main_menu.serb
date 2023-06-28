@@ -1,0 +1,24 @@
+<header>
+<nav id="primary-nav" class="wrapper" aria-label="Main">
+
+    <a href="{{ '/' | relative_url }}"><img src="/images/logo-dark.svg" alt="DataLed logo"></a>
+
+    <button id="hamburger" aria-expanded="false" aria-label="Menu" aria-controls="main-nav">
+        <span>Menu</span>
+        <svg width="24" height="24" aria-hidden="true" aria-controls="main-nav" aria-expanded="false">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z">
+        </svg>
+    </button>
+
+    <div class="main-nav">
+        <ul role="list">
+            {% for item in site.data.nav %}
+            <li>
+                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            </li>
+            {% end %}
+        </ul>
+    </div>
+
+</nav>
+</header>
