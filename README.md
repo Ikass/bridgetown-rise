@@ -4,24 +4,24 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 
 ## Table of Contents
 
-- [Prerequisites](#prerequisites)
+- [Features](#features)
+- [TODO](#todo)
 - [Install](#install)
 - [Development](#development)
 - [Commands](#commands)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
 
-## Prerequisites
+## Features
 
-- [GCC](https://gcc.gnu.org/install/)
-- [Make](https://www.gnu.org/software/make/)
-- [Ruby](https://www.ruby-lang.org/en/downloads/)
-  - `>= 2.7`
-- [Bridgetown Gem](https://rubygems.org/gems/bridgetown)
-  - `gem install bridgetown -N`
-- [Node](https://nodejs.org)
-  - `>= 12`
-- [Yarn](https://yarnpkg.com)
+- Built with [Bridgetown](https://www.bridgetownrb.com)
+
+## TODO
+
+- [] Accessible, responsive and robust main navigation
+- [] @media queries => @container queries
+- [] SEO basics
+- [] Sitemap
 
 ## Install
 
@@ -29,6 +29,7 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 cd bridgetown-site-folder
 bundle install && yarn install
 ```
+
 > Learn more: [Bridgetown Getting Started Documentation](https://www.bridgetownrb.com/docs/).
 
 ## Development
