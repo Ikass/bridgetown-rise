@@ -15,13 +15,14 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 ## Features
 
 - Built with [Bridgetown](https://www.bridgetownrb.com)
+- [Remix](https://remixicon.com/) icons
 
 ## TODO
 
-- [] Accessible, responsive and robust main navigation
-- [] @media queries => @container queries
-- [] SEO basics
-- [] Sitemap
+- [ ] Accessible, responsive and robust main navigation
+- [ ] @media queries => @container queries
+- [ ] SEO basics
+- [ ] Sitemap
 
 ## Install
 

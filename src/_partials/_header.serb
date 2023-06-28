@@ -1,5 +1,5 @@
-<header class="wrapper relative" role="banner">
-  <div class="site-head ontop">
+<header class="wrapper" role="banner">
+  <div class="site-head">
    <a href="/" class="logo">
       {{ metadata.title }}
     </a>

@@ -47,14 +47,14 @@ nav.navbar ul {
   visibility: var(--nav-list-visibility, visible);
 }
 
-nav.navbar [aria-expanded='false'] + ul {
+nav.navbar [aria-expanded="false"] + ul {
   transform: var(--nav-list-transform, translateX(100%));
   visibility: var(--nav-list-visibility, hidden);
 }
 
 /* animates ul only when opening to avoid flash on page load, svg always */
 @media (prefers-reduced-motion: no-preference) {
-  nav.navbar [aria-expanded='true'] + ul,
+  nav.navbar [aria-expanded="true"] + ul,
   nav.navbar svg {
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55),
       visibility 0.05s linear;
@@ -80,7 +80,7 @@ nav.navbar a:where(:hover, :focus) {
 }
 
 /* Change border-color and color for the active page */
-nav.navbar [aria-current='page'] {
+nav.navbar [aria-current="page"] {
   --border-color: var(--color-primary);
   --text-color: var(--color-primary);
 }
@@ -112,6 +112,23 @@ header svg {
   transform: translateY(-0.1em);
 }
 
-nav.navbar [aria-expanded='true'] svg {
+nav.navbar [aria-expanded="true"] svg {
   transform: var(--nav-list-rotate, rotate(45deg));
+}
+
+#hamburger {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+#hamburger > span::after {
+  display: flex;
+  align-self: center;
+  content: url(/images/svg/menu-line.svg);
+}
+
+#hamburger.close > span::after {
+  content: url(/images/svg/close-line.svg);
 }

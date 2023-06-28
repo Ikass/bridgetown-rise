@@ -1,7 +1,8 @@
-import "index.css"
-import "syntax-highlighting.css"
+import "index.css";
+import "syntax-highlighting.css";
 
 // Import all JavaScript & CSS files from src/_components
-import components from "bridgetownComponents/**/*.{js,jsx,js.rb,css}"
+import components from "bridgetownComponents/**/*.{js,jsx,js.rb,css}";
+import "toggle.js";
 
-console.info("Bridgetown is loaded!")
+console.info("Bridgetown is loaded!");
