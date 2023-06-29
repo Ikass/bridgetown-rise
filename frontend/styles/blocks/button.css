@@ -1,1 +1,19 @@
 /* A blank block because there is *always* a button */
+button,
+.button,
+a.button, /* extra specificity to override a */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+label[type="button"] {
+  border: none;
+  border-radius: var(--border-radius);
+  /* background-color: var(--accent); */
+  /* font-size: 1rem; */
+  /* color: var(--bg); */
+  padding: 0.7rem 0.9rem;
+  margin: 0.5rem 0;
+  text-decoration: none;
+  font-family: inherit;
+  /* line-height: normal; */
+}

@@ -26,7 +26,7 @@ h2,
 h3 {
   line-height: 1;
   letter-spacing: var(--tracking-s);
-  font-family: var(--font-display);
+  /* font-family: var(--font-display); */
 }
 
 h1 {

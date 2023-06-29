@@ -137,18 +137,21 @@ nav.navbar button {
   align-self: center;
 }
 
+#hamburger > span {
+  display: flex;
+}
+
 #hamburger > span::after {
-  /* display: flex;
-  align-items: center;
-  align-content: center;
-  align-self: center; */
-  display: grid;
-  place-content: center;
-  align-content: center;
-  align-self: center;
-  content: url(/images/svg/menu-line.svg);
+  content: "";
+  background-image: url(/images/svg/menu-line.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 24px;
+  width: 24px;
+  min-height: 24px;
+  min-width: 24px;
 }
 
 #hamburger.close > span::after {
-  content: url(/images/svg/close-line.svg);
+  background-image: url(/images/svg/close-line.svg);
 }
