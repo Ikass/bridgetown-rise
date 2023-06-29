@@ -1,6 +1,4 @@
 body > header nav {
-<<<<<<< HEAD
-=======
   display: flex;
   gap: var(--gutter);
   /* container: main-nav / inline-size; */
@@ -11,24 +9,6 @@ body > header nav ul {
   gap: var(--gutter);
   list-style: none;
 }
-
-header a {
-  text-decoration: none;
-}
-
-.site-head {
->>>>>>> 837fa1e (some changes)
-  display: flex;
-  gap: var(--gutter);
-  /* container: main-nav / inline-size; */
-}
-
-body > header nav ul {
-  display: flex;
-  gap: var(--gutter);
-  list-style: none;
-}
-<<<<<<< HEAD
 
 header a {
   text-decoration: none;
@@ -41,5 +21,3 @@ header a {
   gap: var(--gutter);
   justify-content: space-between;
 }
-=======
->>>>>>> 837fa1e (some changes)
