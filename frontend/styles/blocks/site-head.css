@@ -1,10 +1,12 @@
 body > header nav {
-  display: flex;
+  display: var(--nav-display, flex);
   gap: var(--gutter);
 }
 
 body > header nav ul {
   display: flex;
+  flex-direction: var(--flex-direction, row);
+  justify-content: var(--flex-justify);
   gap: var(--gutter);
   list-style: none;
 }
@@ -19,4 +21,49 @@ header a {
   align-items: center;
   gap: var(--gutter);
   justify-content: space-between;
+}
+
+@media (width >= 35em) {
+  #hamburger {
+    --nav-button-display: none;
+  }
+}
+
+@media (width <= 35em) {
+  #main-nav {
+    --nav-display: none;
+  }
+  #main-nav.visible {
+    --nav-display: flex;
+    --flex-direction: column;
+    margin-inline: auto;
+  }
+}
+
+/* Mobile menu button */
+
+#hamburger {
+  align-items: center;
+  display: var(--nav-button-display, flex);
+  flex: 0 0 auto;
+  gap: 0.5em;
+}
+
+#hamburger > span {
+  display: flex;
+}
+
+#hamburger > span::after {
+  content: "";
+  background-image: url(/images/svg/menu-line.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 24px;
+  width: 24px;
+  min-height: 24px;
+  min-width: 24px;
+}
+
+#hamburger.close > span::after {
+  background-image: url(/images/svg/close-line.svg);
 }

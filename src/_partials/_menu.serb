@@ -1,8 +1,9 @@
+<button id="hamburger" class="" aria-expanded="false" aria-controls="main-nav">
+  Menu
+  <span></span>
+</button>
+
 <nav id="main-nav" class="" aria-label="Main">
-  <button id="hamburger" class="" aria-expanded="false">
-    Menu
-    <span></span>
-  </button>
   <ul>
     {% for item in site.data.nav %}
     <li>
