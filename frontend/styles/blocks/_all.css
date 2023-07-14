@@ -2,13 +2,12 @@
 @import "button.css";
 @import "card.css";
 @import "code.css";
-@import "menu-grid.css";
 @import "page.css";
 @import "prose.css";
 @import "section.css";
 @import "seperator.css";
 @import "site-foot.css";
-/* @import "site-head.css"; */
+@import "site-head.css";
 @import "site-logo.css";
 @import "skip-link.css";
 @import "textgradient.css";

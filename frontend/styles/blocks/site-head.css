@@ -1,43 +1,37 @@
-body > header nav {
-  display: var(--nav-display, flex);
-  gap: var(--gutter);
-}
-
-body > header nav ul {
-  display: flex;
-  flex-direction: var(--flex-direction, row);
-  justify-content: var(--flex-justify);
-  gap: var(--gutter);
-  list-style: none;
-  justify-content: space-between;
-}
-
 header a {
   text-decoration: none;
 }
 
+/* a grid wrapper */
 .site-head {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+/* '#main-nav' */
+body > header nav {
+  display: var(--display, none);
+  grid-column: 1 / span 2;
+  justify-self: var(--justify, center);
+}
+
+body > header nav ul {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: var(--flex-direction, column);
   gap: var(--gutter);
-  justify-content: space-between;
 }
 
 @media (width >= 35em) {
+  body > header nav {
+    --justify: end;
+    --display: flex;
+    grid-column: 2;
+  }
+  body > header nav ul {
+    --flex-direction: row;
+  }
   #hamburger {
     --nav-button-display: none;
-  }
-}
-
-@media (width <= 35em) {
-  #main-nav {
-    --nav-display: none;
-  }
-  #main-nav.visible {
-    --nav-display: flex;
-    --flex-direction: column;
-    margin-inline: auto;
   }
 }
 
@@ -45,11 +39,19 @@ header a {
 
 #hamburger {
   align-items: center;
+  background-color: transparent;
+  border-radius: 0;
+  cursor: pointer;
   display: var(--nav-button-display, flex);
-  flex: 0 0 auto;
   gap: 0.5em;
+  justify-self: end;
 }
 
+#hamburger[aria-expanded="true"] + #main-nav {
+  --display: flex;
+}
+
+/* hamburger icon from https://remixicon.com/ */
 #hamburger > span {
   display: flex;
 }
@@ -65,6 +67,6 @@ header a {
   min-width: 24px;
 }
 
-#hamburger.close > span::after {
+#hamburger[aria-expanded="true"] > span::after {
   background-image: url(/images/svg/close-line.svg);
 }

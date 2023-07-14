@@ -1,20 +1,19 @@
-const hamburger = document.querySelector("#hamburger");
-const nav = document.querySelector("#main-nav");
+// progressive enchancement
+// document.body.classList.toggle("js-enabled");
 
+const nav = document.querySelector(".site-head");
+const hamburger = document.querySelector("#hamburger");
+
+// Toggle aria-expanded attribute
 hamburger.addEventListener("click", (e) => {
   // aria-expanded="true" signals that the menu is currently open
   const isOpen = hamburger.getAttribute("aria-expanded") === "true";
   hamburger.setAttribute("aria-expanded", !isOpen);
-  // Toggle 'close' class to change the icon
-  hamburger.classList.toggle("close");
-  nav.classList.toggle("visible");
 });
 
 // avoid DRY: disabling menu
 const disableMenu = () => {
   hamburger.setAttribute("aria-expanded", false);
-  hamburger.classList.toggle("close");
-  nav.classList.toggle("visible");
 };
 
 // Hide list on keydown Escape
@@ -24,11 +23,6 @@ document.addEventListener("keyup", (e) => {
   }
 });
 
-// close dropdown menu when you click on the document body
-document.documentElement.addEventListener("click", () => {
-  disableMenu();
-});
-
 // close if clicked outside of event target
 document.addEventListener("click", (e) => {
   const isClickInsideElement = nav.contains(e.target);
@@ -36,3 +30,6 @@ document.addEventListener("click", (e) => {
     disableMenu();
   }
 });
+
+// attachListeners()
+// document.addEventListener("turbo:load", attachListeners)

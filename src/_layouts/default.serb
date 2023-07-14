@@ -5,7 +5,6 @@
   </head>
   <body class="{{ data.layout }} {{ data.page_class }}">
     {%# Shared::Navbar metadata: site.metadata, resource: resource %}
-    {%# "menu", metadata: site.metadata %}
     {%@ "header", metadata: site.metadata %}
 
     <main id="main" class="flow">
