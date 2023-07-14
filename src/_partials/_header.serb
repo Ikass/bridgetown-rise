@@ -1,9 +1,28 @@
-<header class="" role="banner">
+<header role="banner">
   <div class="site-head wrapper">
+
    <a href="/" class="logo">
       {{ metadata.title }}
     </a>
 
-    {%@ "menu" %}
+    <button 
+      id="hamburger" 
+      aria-label="Menu" 
+      aria-expanded="false" 
+      aria-controls="main-nav">
+        Menu
+        <span></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav">
+        <ul role="list">
+            {% for item in site.data.nav %}
+            <li>
+                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            </li>
+            {% end %}
+        </ul>
+    </nav>
+
   </div>
 </header>
