@@ -9,3 +9,23 @@ hamburger.addEventListener("click", (e) => {
   hamburger.classList.toggle("close");
   nav.classList.toggle("visible");
 });
+
+// avoid DRY: disabling menu
+const disableMenu = () => {
+  hamburger.setAttribute("aria-expanded", false);
+};
+
+// Hide list on keydown Escape
+document.addEventListener("keyup", (e) => {
+  if (e.code === "Escape") {
+    disableMenu();
+  }
+});
+
+// close if clicked outside of event target
+document.addEventListener("click", (e) => {
+  const isClickInsideElement = nav.contains(e.target);
+  if (!isClickInsideElement) {
+    disableMenu();
+  }
+});
