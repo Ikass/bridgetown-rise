@@ -82,7 +82,8 @@
     "Avenir Next", Avenir, "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI",
     Arial, Helvetica, "Helvetica Neue", sans-serif;
   --font-serif: Georgia, "Times New Roman", Times, serif;
-  --font-mono: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --font-mono: "RobotoMono", Consolas, Menlo, Monaco, "Andale Mono",
+    "Ubuntu Mono", monospace;
   /* --font-display: ui-serif, serif; */
 
   --font-base: var(--font-sans);

@@ -121,7 +121,7 @@ article [href^="http"]:not([href*="http://localhost:4000"])::after
 
 /* Base selection styles that invert whatever colours are rendered */
 ::selection {
-  background: var(--color-primary);
+  background: var(--color-dark);
   color: var(--color-light);
 }
 
