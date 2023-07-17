@@ -1,19 +1,21 @@
 /* breakout content elements to wrapper based on full bleed image solution by josh cumeau. https://www.joshwcomeau.com/css/full-bleed/ */
 
-.content {
+main {
   --wrapper-max-width: 75rem;
   display: grid;
   grid-template-columns:
     1fr
-    min(48ch, 100%)
+    min(65ch, 100%)
     1fr;
 }
 
-.content > * {
+main > * {
   grid-column: 2;
+  margin-inline: auto;
 }
 
-.content .breakout {
+.full-bleed {
+  grid-column: 1 / -1;
   inline-size: 100%;
-  grid-column: 1 / 4;
+  background-color: var(--stone-2);
 }

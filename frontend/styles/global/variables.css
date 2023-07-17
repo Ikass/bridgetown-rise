@@ -10,6 +10,7 @@
   --tracking: -0.05ch;
   --tracking-s: -0.075ch;
 
+  --color-primary: var(--orange-6);
   --color-dark: var(--stone-10);
   --color-light: var(--stone-0);
 
@@ -75,6 +76,52 @@
   --size-fluid-10: clamp(20rem, 40vw, 30rem);
 
   /* **************** */
+  /* Open-Props borders */
+  /* https://open-props.style/#borders */
+  /* **************** */
+
+  --radius-1: 2px;
+  --radius-2: 5px;
+  --radius-3: 1rem;
+  --radius-4: 2rem;
+  --radius-5: 4rem;
+  --radius-6: 8rem;
+  --radius-round: 50%;
+  --radius-conditional-1: clamp(
+    0px,
+    calc(100vw - 100%) * 9999,
+    var(--radius-1)
+  );
+  --radius-conditional-2: clamp(
+    0px,
+    calc(100vw - 100%) * 9999,
+    var(--radius-2)
+  );
+  --radius-conditional-3: clamp(
+    0px,
+    calc(100vw - 100%) * 9999,
+    var(--radius-3)
+  );
+  --radius-conditional-4: clamp(
+    0px,
+    calc(100vw - 100%) * 9999,
+    var(--radius-4)
+  );
+  --radius-conditional-5: clamp(
+    0px,
+    calc(100vw - 100%) * 9999,
+    var(--radius-5)
+  );
+  --radius-conditional-6: clamp(
+    0px,
+    calc(100vw - 100%) * 9999,
+    var(--radius-6)
+  );
+
+  /* more info about conditional border radius: */
+  /* https://ishadeed.com/article/conditional-border-radius/ */
+
+  /* **************** */
   /* Typography */
   /* **************** */
 
@@ -122,4 +169,19 @@
   --stone-10: #3a3a37;
   --stone-11: #252521;
   --stone-12: #121210;
+
+  /* Orange */
+  --orange-0: #fff4e6;
+  --orange-1: #ffe8cc;
+  --orange-2: #ffd8a8;
+  --orange-3: #ffc078;
+  --orange-4: #ffa94d;
+  --orange-5: #ff922b;
+  --orange-6: #fd7e14;
+  --orange-7: #f76707;
+  --orange-8: #e8590c;
+  --orange-9: #d9480f;
+  --orange-10: #bf400d;
+  --orange-11: #99330b;
+  --orange-12: #802b09;
 }

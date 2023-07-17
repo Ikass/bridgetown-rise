@@ -1,0 +1,6 @@
+<section class="full-bleed region flow text-center">
+    <header class="">
+        <h2>This is a full-bleed component</h2>
+    </header>
+    <p>Because sometimes you absolutely must have a full-bleed component!</p>
+</section>

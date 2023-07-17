@@ -1,17 +1,9 @@
-<!doctype html>
-<html lang="{%= site.locale %}">
-  <head>
-    {%@ "head", metadata: site.metadata, title: data.title %}
-  </head>
-  <body class="{{ data.layout }} {{ data.page_class }}">
-    {%@ "header", metadata: site.metadata %}
+---
+layout: default
+---
 
-    <main id="main" class="flow">
-      <article class="region wrapper prose flow">
-        {%= yield %}
-      </article>
-    </main>
+<article class="region wrapper prose flow">
+  {%= yield %}
+</article>
 
-    {%@ "footer", metadata: site.metadata %}
-  </body>
-</html>
+{%@ "full_bleed" %}
