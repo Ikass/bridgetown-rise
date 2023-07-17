@@ -45,6 +45,7 @@ body > header nav ul {
   display: var(--nav-button-display, flex);
   gap: 0.5em;
   justify-self: end;
+  font-size: var(--size-step-1);
 }
 
 #hamburger[aria-expanded="true"] + #main-nav {
@@ -61,10 +62,12 @@ body > header nav ul {
   background-image: url(/images/svg/menu-line.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  height: 24px;
-  width: 24px;
-  min-height: 24px;
-  min-width: 24px;
+  /* height: 24px; */
+  height: var(--size-step-1);
+  /* width: 24px; */
+  width: var(--size-step-1);
+  /* min-height: 24px;
+  min-width: 24px; */
 }
 
 #hamburger[aria-expanded="true"] > span::after {

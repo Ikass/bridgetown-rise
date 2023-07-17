@@ -1,3 +1,5 @@
-<footer class="wrapper site-foot">
-  Contact me at <a href="mailto:{{ metadata.email }}">{{ metadata.email }}</a>
+<footer class="site-foot">
+  <article class="wrapper">
+    Contact me at <a href="mailto:{{ metadata.email }}">{{ metadata.email }}</a>
+  </article>
 </footer>
