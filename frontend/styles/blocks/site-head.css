@@ -46,6 +46,7 @@ body > header nav ul {
   gap: 0.5em;
   justify-self: end;
   font-size: var(--size-step-1);
+  color: inherit;
 }
 
 #hamburger[aria-expanded="true"] + #main-nav {

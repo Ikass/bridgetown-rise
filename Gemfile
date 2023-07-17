@@ -31,3 +31,5 @@ gem "bridgetown", "~> 1.3.0"
 # Puma is a Rack-compatible server used by Bridgetown
 # (you can optionally limit this to the "development" group)
 gem "puma", "~> 6.3"
+
+gem "bridgetown-seo-tag", "~> 6.0"

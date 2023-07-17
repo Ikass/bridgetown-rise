@@ -24,7 +24,7 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 
 ## TODO
 
-- [ ] Accessible, responsive and robust main navigation
+- [x] Accessible, responsive and robust main navigation
 - [ ] SEO basics
 - [ ] Sitemap
 
