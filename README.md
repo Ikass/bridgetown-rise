@@ -18,15 +18,17 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 
 ## Features
 
-- Built with [Bridgetown](https://www.bridgetownrb.com)
-- [Remix](https://remixicon.com/) icons
+- Built with [Bridgetown](https://www.bridgetownrb.com).
+- [Remix](https://remixicon.com/) icons.
 - [Atkinson Hyperlegible](https://brailleinstitute.org/freefont) typeface for greater legibility and readability for low vision readers, locally served.
+- Justin Ribeiro's [`lite-youtube`](https://github.com/justinribeiro/lite-youtube) plugin.
 
 ## TODO
 
 - [x] Accessible, responsive and robust main navigation
 - [ ] SEO basics
 - [ ] Sitemap
+- [ ] Activate/load `lite-youtube` only with `youtue: true` in front-matter
 
 ## Install
 
