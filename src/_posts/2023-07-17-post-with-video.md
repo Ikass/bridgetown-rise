@@ -5,7 +5,7 @@ date: 2023-07-17 15:35:48 +0300
 categories: updates
 ---
 
-Justin Ribeiro's `lite-youtube` plugin in use.
+Justin Ribeiro's [`lite-youtube`](https://github.com/justinribeiro/lite-youtube) plugin in use.
 
 ### To-Do:
 

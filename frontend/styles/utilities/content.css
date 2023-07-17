@@ -19,3 +19,7 @@ main > * {
   inline-size: 100%;
   background-color: var(--stone-2);
 }
+
+.full-bleed * {
+  margin-inline: auto;
+}
