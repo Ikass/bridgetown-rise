@@ -23,14 +23,16 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 - [Atkinson Hyperlegible](https://brailleinstitute.org/freefont) typeface for greater legibility and readability for low vision readers, locally served.
 - Justin Ribeiro's [`lite-youtube`](https://github.com/justinribeiro/lite-youtube) plugin.
 - [Bridgetown SEO Tag](https://github.com/bridgetownrb/bridgetown-seo-tag) plugin for better SEO.
+- Opens external links and PDFs in a new window. Thanks to Joost van der Schee from [JekyllCodex](http://jekyllcodex.org/).
 
 ## TODO
 
 - [x] Accessible, responsive and robust main navigation.
-- [ ] SEO basics.
+- [x] SEO basics.
 - [ ] Sitemap.
 - [ ] Activate/load `lite-youtube` only with `youtue: true` in front-matter.
-- [ ] Open external links in a new tab/window.
+- [x] Open external links in a new tab/window.
+- [ ] Create basic components/layouts.
 
 ## Install
 
@@ -67,14 +69,3 @@ bin/bridgetown console
 You can deploy Bridgetown sites on hosts like Render or Vercel as well as traditional web servers by simply building and copying the output folder to your HTML root.
 
 > Read the [Bridgetown Deployment Documentation](https://www.bridgetownrb.com/docs/deployment) for more information.
-
-## Contributing
-
-If repo is on GitHub:
-
-1. Fork it
-2. Clone the fork using `git clone` to your local development machine.
-3. Create your feature branch (`git checkout -b my-new-feature`)
-4. Commit your changes (`git commit -am 'Add some feature'`)
-5. Push to the branch (`git push origin my-new-feature`)
-6. Create a new Pull Request
