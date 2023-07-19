@@ -2,6 +2,11 @@ header a {
   text-decoration: none;
 }
 
+header a:hover {
+  text-decoration: underline solid var(--color-primary) 2px;
+  text-underline-offset: 0.25em;
+}
+
 /* a grid wrapper */
 .site-head {
   display: grid;

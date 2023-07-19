@@ -1,5 +1,22 @@
 <footer class="site-foot">
   <article class="wrapper">
     Contact me at <a href="mailto:{{ metadata.email }}">{{ metadata.email }}</a>
+
+    <div class="site-foot__inner">
+      <nav id="footernav" class="site-foot__inner text-step-0" aria-label="Footer">
+        &copy; 2023
+      </nav>
+
+      <nav id="social" class="site-foot__inner" aria-label="Social links">
+        
+        {% for item in site.data.social %}
+        <a href="{{ item.url }}" class="flex">
+          <span class="sr-only">{{ item.title }}</span>
+          <img aria-hidden="true" src="{{ item.icon }}">
+        </a>
+        {% end %}
+
+        </nav>
+    </div>
   </article>
 </footer>

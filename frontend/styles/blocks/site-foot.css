@@ -18,4 +18,9 @@
 .site-foot svg {
   block-size: 0.9em;
   inline-size: 0.9em;
+  fill: var(--color-light);
+}
+
+.site-foot * {
+  color: var(--color-light);
 }

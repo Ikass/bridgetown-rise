@@ -6,3 +6,7 @@
   letter-spacing: var(--tracking-s);
   padding: var(--space-xs) 0;
 }
+
+.logo:hover {
+  text-decoration: none;
+}

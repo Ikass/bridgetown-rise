@@ -103,6 +103,7 @@ main:focus {
   outline: none;
 }
 
+/* add icon for external links */
 article [href^="http"]:not([href*="http://localhost:4000"])::after
 {
   display: inline-block;
