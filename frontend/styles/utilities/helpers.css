@@ -80,3 +80,7 @@ a.text-small {
 .gritty a:hover {
   text-decoration-color: var(--gray-5);
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}

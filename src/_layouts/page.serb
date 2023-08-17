@@ -3,7 +3,7 @@ layout: default
 ---
 
 <article class="region page">
-  <div class="wrapper flow prose">
+  <div class="wrapper flow">
 
     <h1>{{ data.title }}</h1>
 

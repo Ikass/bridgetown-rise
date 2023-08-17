@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="region wrapper prose flow">
+<article class="region content wrapper prose flow">
   {%= yield %}
 </article>
 

@@ -1,6 +1,6 @@
 /* breakout content elements to wrapper based on full bleed image solution by josh cumeau. https://www.joshwcomeau.com/css/full-bleed/ */
 
-main {
+.content {
   --wrapper-max-width: 75rem;
   display: grid;
   grid-template-columns:
@@ -9,7 +9,7 @@ main {
     1fr;
 }
 
-main > * {
+.content > * {
   grid-column: 2;
   margin-inline: auto;
 }
