@@ -33,3 +33,5 @@ gem "bridgetown", "~> 1.3.0"
 gem "puma", "~> 6.3"
 
 gem "bridgetown-seo-tag", "~> 6.0"
+
+gem "bridgetown-sitemap", "~> 2.0"

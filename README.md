@@ -24,6 +24,8 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 - Justin Ribeiro's [`lite-youtube`](https://github.com/justinribeiro/lite-youtube) plugin.
 - [Bridgetown SEO Tag](https://github.com/bridgetownrb/bridgetown-seo-tag) plugin for better SEO.
 - Opens external links and PDFs in a new window. Thanks to Joost van der Schee from [JekyllCodex](http://jekyllcodex.org/).
+- Favicon generated with [Favicon.io](https://favicon.io/)
+- Blog post placeholder image from [Placehold.co](https://placehold.co/)
 
 ## TODO
 

@@ -37,7 +37,9 @@ Bridgetown.configure do |config|
   #   init :parse_routes
   # end
   #
+  config.url = "https://bridgetown-excellent.netlify.app" # the base hostname & protocol for your site
 
+  init :"bridgetown-sitemap"
   init :"bridgetown-seo-tag"
 
   # For more documentation on how to configure your site using this initializers file,
