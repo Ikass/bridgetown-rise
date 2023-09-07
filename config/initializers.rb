@@ -41,6 +41,7 @@ Bridgetown.configure do |config|
 
   init :"bridgetown-sitemap"
   init :"bridgetown-seo-tag"
+  init :"bridgetown-svg-inliner"
 
   # For more documentation on how to configure your site using this initializers file,
   # visit: https://edge.bridgetownrb.com/docs/configuration/initializers/

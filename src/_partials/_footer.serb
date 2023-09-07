@@ -12,7 +12,7 @@
         {% for item in site.data.social %}
         <a href="{{ item.url }}" class="flex">
           <span class="sr-only">{{ item.title }}</span>
-          <img aria-hidden="true" src="{{ item.icon }}">
+          <img aria-hidden="true" src="/images/icons/{{ item.icon }}">
         </a>
         {% end %}
 

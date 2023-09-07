@@ -26,12 +26,13 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 - Opens external links and PDFs in a new window. Thanks to Joost van der Schee from [JekyllCodex](http://jekyllcodex.org/).
 - Favicon generated with [Favicon.io](https://favicon.io/)
 - Blog post placeholder image from [Placehold.co](https://placehold.co/)
+- [Sitemap](https://github.com/ayushn21/bridgetown-sitemap) plugin for better SEO.
 
 ## TODO
 
 - [x] Accessible, responsive and robust main navigation.
 - [x] SEO basics.
-- [ ] Sitemap.
+- [x] Sitemap.
 - [ ] Activate/load `lite-youtube` only with `youtue: true` in front-matter.
 - [x] Open external links in a new tab/window.
 - [ ] Create basic components/layouts.

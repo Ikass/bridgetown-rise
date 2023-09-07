@@ -1,3 +1,7 @@
+footer {
+  --external-link: url("/images/svg/external-link-light.svg");;
+}
+
 .site-foot {
   padding: var(--space-s-m);
   background: var(--color-dark);
@@ -8,7 +12,7 @@
   display: flex;
   gap: var(--space-s);
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 :not(nav#social).site-foot__inner {
@@ -23,4 +27,13 @@
 
 .site-foot * {
   color: var(--color-light);
+}
+
+#social a {
+  display: flex;
+}
+
+#social a::after {
+  display: block;
+  min-width: 1em;
 }
