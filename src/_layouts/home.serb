@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{%@ "hero" %}
+
 <article class="region content wrapper prose flow">
   {%= yield %}
 </article>

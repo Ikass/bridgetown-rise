@@ -1,0 +1,6 @@
+.hero {
+    background-color: var(--gradient-25);
+    background-image: var(--hero-gradient), url("https://source.unsplash.com/vj_9l20fzj0");
+    background-size: cover;
+    padding-block: var(--size-fluid-8);
+}

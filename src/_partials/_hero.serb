@@ -1,0 +1,4 @@
+<section class="wrapper hero flow">
+    <h1>{{ data.title | markdownify }}</h1>
+    <p>{{ data.subtitle | markdownify}}</p>
+</section>
