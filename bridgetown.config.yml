@@ -32,3 +32,11 @@ template_engine: serbea
 # timezone: America/Los_Angeles
 # pagination:
 #   enabled: true
+
+collections:
+  posts:
+    output: true
+    permalink: /posts/:path/
+  products:
+    output: true
+    permalink: /shop/:path/

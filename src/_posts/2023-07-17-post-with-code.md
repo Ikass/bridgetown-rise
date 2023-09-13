@@ -1,6 +1,6 @@
 ---
-layout: post
 title: "Post with Some Code"
+image: https://source.unsplash.com/gZXx8lKAb7Y
 date: 2023-07-17 13:56:48 +0300
 categories: updates
 ---

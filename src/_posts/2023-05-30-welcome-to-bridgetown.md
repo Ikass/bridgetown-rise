@@ -1,7 +1,7 @@
 ---
-layout: post
-title:  "Your First Post on Bridgetown"
-date:   2023-05-30 15:31:48 +0300
+title: "Your First Post on Bridgetown"
+image: https://source.unsplash.com/2GW4S08kd-8
+date: 2023-05-30 15:31:48 +0300
 categories: updates
 ---
 

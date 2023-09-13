@@ -46,3 +46,8 @@
   right: 0;
   top: 0;
 }
+
+.card img {
+  background-color: var(--color-light);
+  aspect-ratio: 4/4;
+}

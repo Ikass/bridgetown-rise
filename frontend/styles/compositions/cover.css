@@ -1,0 +1,30 @@
+.cover {
+    --padding: 1rem;
+    --min-height: 50vh;
+    --space: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: var(--min-height);
+    padding: var(--padding);
+}
+
+/* .cover > :first-child:not(h2) {
+    margin-top: 0;
+}
+
+.cover > * {
+    margin-top: var(--space);
+    margin-bottom: var(--space);
+}
+
+.cover > h2 {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.cover > :last-child:not(h2) {
+    margin-bottom: 0;
+} */
+
+/* Every Layout examples: */
+/* https: //every-layout-basic.netlify.app/ */
