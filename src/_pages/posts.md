@@ -1,10 +1,13 @@
 ---
 layout: page
 title: Posts
+paginate:
+  collection: posts
+  per_page: 4
 ---
 
 <ul class="grid blog" role="list" data-layout='50-50'>
-  {% collections.posts.resources.each do |post| %}
+  {% paginator.resources.each do |post| %}
   <li class="card border-2 flow overflow-hidden">
     <img class="ar-image" src="{{ post.data.image || 'https://placehold.co/778x438?text=Hello+Ruby'}}">
     <h3>
@@ -16,4 +19,18 @@ title: Posts
   {% end %}
 </ul>
 
-If you have a lot of posts, you may want to consider adding [pagination](https://www.bridgetownrb.com/docs/content/pagination)!
+{% if paginator.total_pages > 1 %}
+
+  <ul class="pagination">
+    {% if paginator.previous_page %}
+    <li>
+      <a href="{{ paginator.previous_page_path }}">Previous Page</a>
+    </li>
+    {% end %}
+    {% if paginator.next_page %}
+    <li>
+      <a href="{{ paginator.next_page_path }}">Next Page</a>
+    </li>
+    {% end %}
+  </ul>
+{% end %}

@@ -2,6 +2,8 @@
 layout: page
 title: Shop
 permalink: /shop/
+paginate:
+  collection: products
 ---
 
 <ul class="grid" role="list" data-layout='50-50'>

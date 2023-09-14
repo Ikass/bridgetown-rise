@@ -30,8 +30,8 @@ template_engine: serbea
 # update `publicPath`.
 
 # timezone: America/Los_Angeles
-# pagination:
-#   enabled: true
+pagination:
+  enabled: true
 
 collections:
   posts:

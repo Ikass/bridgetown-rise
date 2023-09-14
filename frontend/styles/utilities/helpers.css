@@ -44,7 +44,7 @@ a.text-small {
 
 .text-bold {
   font-weight: 700;
-  color: var(--color-dark);
+  /* color: var(--color-dark); */
 }
 
 .mx-auto {

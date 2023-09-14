@@ -1,12 +1,30 @@
 <footer class="site-foot">
-  <article class="wrapper">
-    Contact me at <a href="mailto:{{ metadata.email }}">{{ metadata.email }}</a>
+  <article class="wrapper grid">
+    <div>
+      <p class="text-bold">
+        Bridgetown Excellent
+      </p>
+      <p>
+        An (opiniated) Bridgetown starter, based on Andy Bell’s talk “Be the browser’s mentor, not its micromanager”.
+      </p>
+    </div>
+    <p>
+      Contact me at <a href="mailto:{{ metadata.email }}">{{ metadata.email }}</a>
+    </p>
 
-    <div class="site-foot__inner">
-      <nav id="footernav" class="site-foot__inner text-step-0" aria-label="Footer">
-        &copy; 2023
-      </nav>
+    <div>
+      <p class="text-bold">Quick Links</p>
+      <ul role="list">
+        {% for item in site.data.nav %}
+          <li>
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          </li>
+        {% end %}
+      </ul>
+    </div>
 
+    <div>
+      <p class="text-bold">Social Links</p>
       <nav id="social" class="site-foot__inner" aria-label="Social links">
         
         {% for item in site.data.social %}
@@ -16,7 +34,14 @@
         </a>
         {% end %}
 
-        </nav>
+      </nav>
     </div>
+
   </article>
+  <div class="site-foot__inner text-step-0">
+    <p>&copy; 2023</p>
+    <p>Developer by 
+      <a href="https://grittypublishing.com">Gritty Publishing</a>
+    </p>
+  </div>
 </footer>
