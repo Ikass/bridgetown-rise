@@ -1,6 +1,6 @@
 <footer class="site-foot">
   <article class="wrapper grid">
-    <div>
+    <div class="flow">
       <p class="text-bold">
         Bridgetown Excellent
       </p>
@@ -12,7 +12,7 @@
       Contact me at <a href="mailto:{{ metadata.email }}">{{ metadata.email }}</a>
     </p>
 
-    <div>
+    <div class="flow">
       <p class="text-bold">Quick Links</p>
       <ul role="list">
         {% for item in site.data.nav %}
@@ -23,7 +23,7 @@
       </ul>
     </div>
 
-    <div>
+    <div class="flow">
       <p class="text-bold">Social Links</p>
       <nav id="social" class="site-foot__inner" aria-label="Social links">
         
@@ -38,7 +38,7 @@
     </div>
 
   </article>
-  <div class="site-foot__inner text-step-0">
+  <div class="site-foot__inner centered text-step-0">
     <p>&copy; 2023</p>
     <p>Developer by 
       <a href="https://grittypublishing.com">Gritty Publishing</a>

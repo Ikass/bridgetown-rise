@@ -27,6 +27,7 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 - Favicon generated with [Favicon.io](https://favicon.io/)
 - Blog post placeholder image from [Placehold.co](https://placehold.co/)
 - [Sitemap](https://github.com/ayushn21/bridgetown-sitemap) plugin for better SEO.
+- Host on [Render](https://render.com/), just edit the `render.yaml` file in site root.
 
 ## TODO
 
@@ -34,6 +35,7 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 - [x] SEO basics.
 - [x] Sitemap.
 - [ ] Activate/load `lite-youtube` only with `youtue: true` in front-matter.
+- [ ] Inline SVG files.
 - [x] Open external links in a new tab/window.
 - [ ] Create basic components/layouts.
 

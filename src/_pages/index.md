@@ -6,7 +6,7 @@ subtitle: An (opiniated) Bridgetown starter, based on Andy Bell’s talk _"Be th
 
 ## Bridgetown starter
 
-This (opiniated) [Bridgetown](https://www.bridgetownrb.com) starter is based on [Andy Bell’s](https://bell.bz/@andy) talk ‘Be the browser’s mentor, not its micromanager’ and it’s companion website [buildexcellentwebsit.es](https://buildexcellentwebsit.es/), as well as [Lene Saile's](https://www.lenesaile.com/en/) [Eleventy Excellent](https://github.com/madrilene/eleventy-excellent) starter template.
+This (opiniated) [Bridgetown](https://www.bridgetownrb.com) starter template is based on [Andy Bell’s](https://bell.bz/@andy) talk ‘Be the browser’s mentor, not its micromanager’ and it’s companion website [buildexcellentwebsit.es](https://buildexcellentwebsit.es/), as well as [Lene Saile's](https://www.lenesaile.com/en/) [Eleventy Excellent](https://github.com/madrilene/eleventy-excellent) starter template.
 
 It uses progressive enhancement, CSS layout, fluid type & spacing, as well as modern CSS features.
 
