@@ -37,6 +37,14 @@
       </nav>
     </div>
 
+    <div class="flow">
+      <p class="text-bold">Social Links with inlined SVG</p>
+
+       {%# Not working currently! %}
+       {%# "social_links" %}
+
+    </div>
+
   </article>
   <div class="site-foot__inner centered text-step-0">
     <p>&copy; 2023</p>

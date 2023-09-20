@@ -1,0 +1,11 @@
+<nav id="social" class="site-foot__inner" aria-label="Social links">
+
+    {% for item in site.data.social %}
+
+        <a href="{{ item.url }}" class="flex">
+            <span class="sr-only">{{ item.title }}</span>
+            {% svg "/assets/icons/{{ item.icon }}" %}
+        </a>
+    {% endfor %}
+
+</nav>
