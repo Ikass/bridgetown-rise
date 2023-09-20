@@ -4,8 +4,9 @@
 
         <a href="{{ item.url }}" class="flex">
             <span class="sr-only">{{ item.title }}</span>
-            {%= svg "/assets/icons/{{ item.icon }}" %}
+            {% icon = item.icon %}
+            {%= svg "/images/icons/" + icon %}
         </a>
-    {% endfor %}
+    {% end %}
 
 </nav>
