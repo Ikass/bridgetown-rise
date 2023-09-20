@@ -1,4 +1,4 @@
-<footer class="site-foot">
+<footer class="site-foot flow">
   <article class="wrapper grid">
     <div class="flow">
       <p class="text-bold">
@@ -40,7 +40,7 @@
   </article>
   <div class="site-foot__inner centered text-step-0">
     <p>&copy; 2023</p>
-    <p>Developer by 
+    <p>Developed by 
       <a href="https://grittypublishing.com">Gritty Publishing</a>
     </p>
   </div>

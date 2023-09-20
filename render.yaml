@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: bt-excellent
+    name: bridgetown-excellent
     env: static
     buildCommand: bin/bridgetown deploy
     staticPublishPath: ./output
