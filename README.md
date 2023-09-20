@@ -4,7 +4,7 @@ Welcome to your new Bridgetown website! You can update this README file to provi
 
 ## Preview
 
-[https://bridgetown-excellent.netlify.app/](https://bridgetown-excellent.netlify.app/)
+[Live Demo](https://bridgetown-excellent.onrender.com/)
 
 ## Table of Contents
 
