@@ -4,16 +4,15 @@ title: Shop
 permalink: /shop/
 paginate:
   collection: products
-  per_page: 4
 ---
 
-<ul class="grid" role="list" data-layout='50-50'>
+<ul class="grid" role="list">
   {% paginator.resources.each do |product| %}
-  <li class="card border-2 flow overflow-hidden">
+  <li class="card border-2 flow overflow-hidden product">
     <img class="ar-image" src="{{ product.data.image || 'https://placehold.co/778x438?text=Hello+Ruby'}}">
-    <h3>
+    <h2>
       <a href="{{ product.relative_url }}">{{ product.data.title }}</a>
-    </h3>
+    </h2>
     <p class="text-small">{{ product.data.date | date_to_string: "ordinal", "US" }}</p>
     <p>{{ product.data.description }}</p>
   </li>

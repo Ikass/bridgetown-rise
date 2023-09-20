@@ -1,3 +1,11 @@
 .product h1 {
     font-size: var(--size-step-3);
 }
+
+.product h2 {
+    font-size: var(--size-step-2);
+}
+
+.product.card {
+    padding: var(--space-s-m);
+}
