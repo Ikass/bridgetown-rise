@@ -39,3 +39,7 @@ footer {
   /* do not set min-width to not show */
   /* min-width: 1em; */
 }
+
+#social a>svg:hover {
+  stroke: var(--color-primary);
+}

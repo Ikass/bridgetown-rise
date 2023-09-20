@@ -1,0 +1,11 @@
+<nav id="social" class="site-foot__inner" aria-label="Social links">
+
+    <% site.data.social.each do |item| %>
+        <a href="<%= item.url %>" class="flex">
+            <span class="sr-only"><%= item.title %></span>
+            <% icon = item.icon %>
+            <%= svg "/images/icons/" + icon %>
+        </a>
+    <% end %>
+
+</nav>

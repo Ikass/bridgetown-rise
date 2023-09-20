@@ -9,17 +9,17 @@
       </p>
     </div>
     <p>
-      Contact me at <a href="mailto:{{ metadata.email }}">{{ metadata.email }}</a>
+      Contact me at <a href="mailto:<%= metadata.email %>"><%= metadata.email %></a>
     </p>
 
     <div class="flow">
       <p class="text-bold">Quick Links</p>
       <ul role="list">
-        {% for item in site.data.nav %}
+        <% site.data.nav.each do |item| %>
           <li>
-            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            <%= link_to item.title, item.url %>
           </li>
-        {% end %}
+        <% end %>
       </ul>
     </div>
 
@@ -27,22 +27,19 @@
       <p class="text-bold">Social Links</p>
       <nav id="social" class="site-foot__inner" aria-label="Social links">
         
-        {% for item in site.data.social %}
-        <a href="{{ item.url }}" class="flex">
-          <span class="sr-only">{{ item.title }}</span>
-          <img aria-hidden="true" src="/images/icons/{{ item.icon }}">
-        </a>
-        {% end %}
+        <% site.data.social.each do |item| %>
+          <a href="<%= item.url %>" class="flex">
+            <span class="sr-only"><%= item.title %></span>
+            <img aria-hidden="true" src="/images/icons/<%= item.icon %>">
+          </a>
+        <% end %>
 
       </nav>
     </div>
 
     <div class="flow">
       <p class="text-bold">Social Links with inlined SVG</p>
-
-       {%# Not working currently! %}
-       {%# "social_links" %}
-
+       <%= render "social_links" %>
     </div>
 
   </article>

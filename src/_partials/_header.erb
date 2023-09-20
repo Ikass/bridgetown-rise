@@ -2,7 +2,7 @@
   <div class="site-head wrapper">
 
    <a href="/" class="logo">
-      {{ metadata.title }}
+      <%= metadata.title %>
     </a>
 
     <button 
@@ -16,11 +16,10 @@
 
     <nav id="main-nav" class="main-nav">
         <ul role="list">
-            {% for item in site.data.nav %}
-            <li>
-                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            <% site.data.nav.each do |item| %>
+                <li><%= link_to item.title, item.url %></li>
             </li>
-            {% end %}
+            <% end %>
         </ul>
     </nav>
 

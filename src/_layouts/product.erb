@@ -4,11 +4,11 @@ layout: default
 
 <article class="region page">
   <div class="wrapper grid" data-layout="50-50">
-    <img class="" src="{{ data.image || 'https://placehold.co/778x438?text=Hello+Ruby'}}">
+    <img src="<%= data.image || 'https://placehold.co/778x438?text=Hello+Ruby' %>">
 
     <div class="flow">
-      <h1>{{ data.title }}</h1>
-      {%= yield %}
+      <h1><%= data.title %></h1>
+       <%= yield %>
     </div>
   
   </div>

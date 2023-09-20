@@ -2,10 +2,10 @@
 layout: default
 ---
 
-{%@ "hero" %}
+<%= render "hero" %>
 
 <article class="region content wrapper prose flow">
-  {%= yield %}
+  <%= yield %>
 </article>
 
-{%@ "full_bleed" %}
+<%= render "full_bleed" %>

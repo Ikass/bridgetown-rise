@@ -17,10 +17,10 @@
 # https://learnxinyminutes.com/docs/yaml/
 #
 
-url: "" # the base hostname & protocol for your site, e.g. https://example.com
+url: "https://bridgetown-excellent.onrender.com" # the base hostname & protocol for your site, e.g. https://example.com
 
 permalink: pretty
-template_engine: serbea
+template_engine: erb
 
 # Other options you might want to investigate:
 #
@@ -29,7 +29,7 @@ template_engine: serbea
 # If you're using esbuild for frontend assets, edit `esbuild.config.js` to
 # update `publicPath`.
 
-# timezone: America/Los_Angeles
+timezone: Europe/Riga
 pagination:
   enabled: true
 
