@@ -27,19 +27,16 @@
       <p class="text-bold">Social Links</p>
       <nav id="social" class="site-foot__inner" aria-label="Social links">
         
-        <% site.data.social.each do |item| %>
+        <% site.data.social_svg.each do |item| %>
           <a href="<%= item.url %>" class="flex">
             <span class="sr-only"><%= item.title %></span>
-            <img aria-hidden="true" src="/images/icons/<%= item.icon %>">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="<%= item.svg %>"></path>
+            </svg>
           </a>
         <% end %>
 
       </nav>
-    </div>
-
-    <div class="flow">
-      <p class="text-bold">Social Links with inlined SVG</p>
-       <%= render "social_links" %>
     </div>
 
   </article>

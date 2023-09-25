@@ -21,9 +21,10 @@ footer {
 }
 
 .site-foot svg {
-  block-size: 0.9em;
-  inline-size: 0.9em;
+  /* block-size: 0.9em; */
+  /* inline-size: 0.9em; */
   fill: var(--color-light);
+  /* fill: var(--color-primary); */
 }
 
 .site-foot * {
@@ -35,11 +36,12 @@ footer {
 }
 
 #social a::after {
-  display: block;
+  display: none;
   /* do not set min-width to not show */
   /* min-width: 1em; */
 }
 
 #social a>svg:hover {
-  stroke: var(--color-primary);
+  /* stroke: var(--color-primary); */
+  fill: var(--color-primary);
 }

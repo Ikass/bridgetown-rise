@@ -113,7 +113,8 @@ article [href^="http"]:not([href*="http://localhost:4000"])::after
   display: inline-block;
   inline-size: 1em;
   block-size: 1em;
-  background-image: var( --external-link, url("/images/svg/external-link-line.svg"));
+  /* background-image: var( --external-link, url("/images/svg/external-link-line.svg")); */
+  background-image: var(--external-link, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z'%3E%3C/path%3E%3C/svg%3E"));
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60% auto;
