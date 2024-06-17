@@ -16,3 +16,7 @@ article > article-body {
   flex: 1;
   justify-content: space-between;
 }
+
+body > footer {
+  background-color: var(--gray-4);
+}

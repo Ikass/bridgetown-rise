@@ -7,8 +7,7 @@ paginate:
   per_page: 4
 ---
 
-<!-- <section role="list" class="grid"> -->
-<br-grid>
+<section class="grid container">
   <% paginator.resources.each do |post| %>
     <article>
       <header>
@@ -30,8 +29,7 @@ paginate:
       </footer>
     </article>
   <% end %>
-</br-grid>
-<!-- </section> -->
+</section>
 
 
 <% if paginator.total_pages > 1 %>
