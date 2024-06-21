@@ -1,5 +1,9 @@
 <%# TODO: refactor into a component with multiple versions %>
-<section class="container hero flow">
-    <h1><%= markdownify data.title %></h1>
-    <p><%= markdownify data.subtitle %></p>
+<section class="hero flow">
+    <br-container>
+        <hgroup>
+            <h1><%= markdownify data.title %></h1>
+            <p><%= markdownify data.subtitle %></p>
+        </hgroup>
+    </br-container>
 </section>

@@ -1,6 +1,6 @@
 /* @import 'reset.css'; */
-/* @import 'variables.css'; */
+@import 'variables.css';
 @import 'fonts.css';
 /* @import 'global-styles.css'; */
 @import 'pico-customization.css';
-/* @import 'layout.css'; */
+@import 'layout.css';

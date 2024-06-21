@@ -1,5 +1,5 @@
 /* Set line lengths */
-p,
+/* p,
 li,
 blockquote:not([class]) {
   max-inline-size: 65ch;
@@ -9,7 +9,55 @@ h1,
 h2,
 h3 {
   max-inline-size: 25ch;
+} */
+
+/* Container 
+  Horizontally centered
+  Customizable max width, default of 85rem or 1360px
+*/
+br-container {
+  display: block;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  padding-block: var(--padding-block, 1rem);
+  max-inline-size: var(--container-max-width, 85rem);
 }
+
+br-container :is(h1, header, hgroup) {
+  text-align: center;
+}
+
+.hero br-container {
+  --container-max-width: var(--wrapper-lg);
+  text-align: left;
+}
+
+br-container[data-layout="content"] {
+  --container-max-width: var(--wrapper-md);
+}
+
+
+/* Grid */
+br-grid {
+  /* --grid-min-item-size: var(--size-fluid-9); */
+  display: grid;
+  grid-template-columns: var(--grid-layout-columns,
+                            repeat(var(--grid-placement, auto-fit),
+                            minmax(var(--grid-min-item-size, 16rem), 1fr)));
+  gap: var(--gutter);
+  /* max-width: var(--wrapper-width, 85rem); */
+  max-inline-size: var(--grid-max-width, 85rem);
+  align-items: var(--grid-alignment, start);
+  margin-inline: auto;
+  padding-inline: var(--gutter, 1rem);
+  padding-block: var(--padding-block, 1rem);
+  background-color: var(--grid-bg-color);
+}
+
+br-grid > br-grid-item > p {
+  padding: var(--gutter, 1rem);
+}
+
 
 /*** WRAPPER
  * Sets a max width, adds a consistent gutter and horizontally
@@ -47,21 +95,6 @@ A flexible layout that will create an auto-fill grid with configurable grid item
 */
 
 /* TODO: refactor to web components with Declarative Shadow DOM */
-/* TODO: rename to `br-grid` */
-
-br-grid {
-  --grid-min-item-size: var(--size-fluid-9);
-  display: grid;
-  grid-template-columns: var(--grid-layout-columns,
-  repeat(var(--grid-placement, auto-fill),
-  minmax(var(--grid-min-item-size, 16rem), 1fr)));
-  gap: var(--gutter);
-  max-width: var(--wrapper-width, 85rem);
-  align-items: var(--grid-alignment, start);
-  margin-inline: auto;
-  padding-block: var(--padding-block, 1rem);
-  background-color: var(--background-color);
-}
 
 grid-container {
   /* --grid-alignment: center; */

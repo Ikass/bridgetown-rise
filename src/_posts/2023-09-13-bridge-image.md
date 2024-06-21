@@ -7,6 +7,6 @@ categories: bridges
 
 Allrighty, let's see how an image looks in a blog post.
 
-Here's a nice complex bridge:
+Here's a nice bridge:
 
-![aerial view of city buildings during daytime](https://source.unsplash.com/LQSqt43npsk)
+![Bridge Over Calm Waters](/images/bridge-1920w.jpg)

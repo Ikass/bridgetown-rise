@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Bridgetown Excellent
+title: Bridgetown Rise
 subtitle: An (opiniated) Bridgetown starter, based on Andy Bell’s talk _"Be the browser’s mentor, not its micromanager"_.
 ---
 

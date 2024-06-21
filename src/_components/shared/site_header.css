@@ -4,9 +4,9 @@
 site-header {
   display: grid;
   grid-template-columns: max-content 1fr;
-  max-inline-size: var(--wrapper-max-width, 85rem);
+  /* max-inline-size: var(--wrapper-max-width, 85rem); */
   margin-inline: auto;
-  padding-inline: var(--gutter);
+  /* padding-inline: var(--gutter); */
 }
 
 site-header #logo {
