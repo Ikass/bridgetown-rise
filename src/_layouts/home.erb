@@ -3,12 +3,11 @@ layout: default
 ---
 
 <%= render "hero" %>
+<%# render Shared::Hero.new(metadata: site.metadata, resource: resource, data: data) %>
 
-<grid-container data-layout="content">
-</grid-container>
-<section class="container">
+<br-container>
     <%= yield %>
-</section>
+</br-container>
 
 <%= render "features" %>
 

@@ -1,9 +1,59 @@
 <%# TODO: refactor into a component with multiple versions %>
-<section class="hero flow">
+<br-hero id="hero" class="flow" data-variant="single">
     <br-container>
         <hgroup>
             <h1><%= markdownify data.title %></h1>
             <p><%= markdownify data.subtitle %></p>
         </hgroup>
     </br-container>
-</section>
+</br-hero>
+
+
+<br-hero id="hero" data-variant="split">
+    <br-container>
+        <br-grid data-layout="50-50">
+            <br-grid-item>
+                <hgroup>
+                    <h1><%= markdownify data.title %></h1>
+                    <p><%= markdownify data.subtitle %></p>
+                </hgroup>
+            </br-grid-item>
+
+            <img src="https://placehold.co/778x438?text=Hello+Ruby">
+    
+        </br-grid>
+    </br-container>
+</br-hero>
+
+<style>
+
+    body > main > br-hero#hero[data-variant="single"] > br-container {
+        padding-block: var(--size-fluid-8);
+        background: var(--gradient-25);
+    }
+
+    br-hero > br-container > br-grid {
+        background: var(--gray-3);
+    }
+
+    br-hero[data-variant="split"] {
+        background-color: var(--gradient-3);
+        background-image: var(--hero-gradient);
+    }
+
+    br-hero[data-variant="split"] > br-container > br-grid[data-layout="50-50"] {
+        --grid-alignment: center;
+        text-align: left;
+    }
+
+    br-hero[data-variant="split"] > br-container > br-grid[data-layout="50-50"] > img {
+        justify-self: center;
+    }
+    
+    br-grid[data-layout="50-50"]  > br-grid-item {
+        padding: var(--gutter);
+    }
+
+
+
+</style>

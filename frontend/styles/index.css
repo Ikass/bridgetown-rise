@@ -9,4 +9,4 @@
 /* @import "compositions/_all.css" layer(composition); */
 @import "blocks/_all.css" layer(blocks);
 /* @import "utilities/_all.css" layer(utilities); */
-@import "vendor/pico.css"
+@import "vendor/pico.css";
