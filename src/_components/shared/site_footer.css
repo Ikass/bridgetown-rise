@@ -1,3 +1,7 @@
+/* ************************ */
+/* TODO: Fix the left margin conflict with PicoCSS */
+/* ************************ */
+
 body > footer {
     background: var(--color-dark);
     color: var(--color-light);
@@ -28,10 +32,11 @@ body > footer nav:not(#social) {
     flex-direction: column;
 }
 
-body>footer nav > ul {
-    align-items: start;
+body > footer nav > ul {
+    align-items: start; 
     display: flex;
     flex-direction: column;
+    margin-inline-start: 0;
 }
 
 body > footer > br-grid #social {
@@ -39,6 +44,11 @@ body > footer > br-grid #social {
     justify-content: flex-start;
 }
 
-body>footer>br-grid #social * {
+body > footer br-grid nav#social > a {
     color: var(--color-light);
+    color: #c2c7d0; /* Pico text color  */
+}
+
+body > footer br-grid nav#social > a:hover {
+    color: var(--pico-color);
 }

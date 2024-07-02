@@ -2,6 +2,10 @@
 layout: home
 title: Bridgetown Rise
 subtitle: An (opiniated) Bridgetown starter, based on Andy Bell’s talk _"Be the browser’s mentor, not its micromanager"_.
+image: bridge
+image_alt: Bridge
+hero_image: san-francisco-bridge
+hero_image_alt: "San Francisco bridge"
 ---
 
 ## Bridgetown starter

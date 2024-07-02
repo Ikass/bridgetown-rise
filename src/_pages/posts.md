@@ -4,19 +4,19 @@ title: Blog Posts
 page_class: posts
 paginate:
   collection: posts
-  per_page: 4
+  per_page: 6
 ---
 
 <!-- <section class="grid container"> -->
 <br-container>
   <br-grid>
     <% paginator.resources.each do |post| %>
-      <article>
+      <article>     
         <header>
           <img
             slot="image"
             src="<%= post.data.image || 'https://placehold.co/778x438?text=Hello+Ruby' %>"
-            alt="A kitten sits patiently between a terracotta pot and decorative grasses."
+            alt="Placeholder image wth the text 'Hello Ruby'."
           />
         </header>
         <article-body>

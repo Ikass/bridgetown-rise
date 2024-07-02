@@ -1,8 +1,12 @@
 /* Global variables */
 
 :root {
-  --gutter: var(--size-fluid-2);
   --border-radius: 0.5rem;
+
+  --gutter: var(--size-fluid-2);
+  --padding-inline: var(--size-fluid-2);
+  --padding-block: var(--size-fluid-4);
+
   --transition-base: 250ms ease;
   --transition-movement: 200ms linear;
   --transition-fade: 200ms ease;

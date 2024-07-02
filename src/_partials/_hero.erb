@@ -1,59 +1,67 @@
 <%# TODO: refactor into a component with multiple versions %>
-<br-hero id="hero" class="flow" data-variant="single">
+<section id="hero" class="flow" data-layout="hero-single">
     <br-container>
         <hgroup>
             <h1><%= markdownify data.title %></h1>
             <p><%= markdownify data.subtitle %></p>
         </hgroup>
     </br-container>
-</br-hero>
+</section>
 
 
-<br-hero id="hero" data-variant="split">
+<section id="hero" data-layout="hero-split">
     <br-container>
         <br-grid data-layout="50-50">
+
             <br-grid-item>
                 <hgroup>
                     <h1><%= markdownify data.title %></h1>
                     <p><%= markdownify data.subtitle %></p>
                 </hgroup>
             </br-grid-item>
+   
+            <img src="images/<%= data.hero_image %>-1200w.jpg" width="1200" height="806" loading="lazy">
 
-            <img src="https://placehold.co/778x438?text=Hello+Ruby">
-    
         </br-grid>
     </br-container>
-</br-hero>
+</section>
 
 <style>
 
-    body > main > br-hero#hero[data-variant="single"] > br-container {
+    section#hero[data-layout="hero-single"] {
         padding-block: var(--size-fluid-8);
-        background: var(--gradient-25);
+        background-image: var(--gradient-25);
+        background-image: var(--hero-gradient-2);
+
+        /* https://www.debugbear.com/blog/responsive-images#css-syntax-for-responsive-background-images */
+        /* Fallback */
+        background-image: var(--hero-gradient-2), url("/images/hero/<%= data.image %>-1200w.jpg");
+
+        /* Prefixed */
+        background-image: var(--hero-gradient-2), -webkit-image-set(
+            url("/images/hero/<%= data.image %>-1200w.webp") type("image/webp"),
+            url("/images/hero/<%= data.image %>-1200w.jpg") type("image/jpeg")
+        );
+
+        /* Default */
+        background-image: var(--hero-gradient-2), image-set(
+            url("/images/hero/<%= data.image %>-1200w.webp") type("image/webp"),
+            url("/images/hero/<%= data.image %>-1200w.jpg") type("image/jpeg")
+        );
+
+        background-size: cover;
     }
 
-    br-hero > br-container > br-grid {
-        background: var(--gray-3);
-    }
-
-    br-hero[data-variant="split"] {
+    section[data-layout="hero-split"] {
+        padding-block: var(--size-fluid-6);
         background-color: var(--gradient-3);
         background-image: var(--hero-gradient);
     }
 
-    br-hero[data-variant="split"] > br-container > br-grid[data-layout="50-50"] {
+    section[data-layout="hero-split"] > br-container > br-grid[data-layout="50-50"] {
         --grid-alignment: center;
         text-align: left;
     }
-
-    br-hero[data-variant="split"] > br-container > br-grid[data-layout="50-50"] > img {
-        justify-self: center;
-    }
-    
-    br-grid[data-layout="50-50"]  > br-grid-item {
-        padding: var(--gutter);
-    }
-
 
 
 </style>

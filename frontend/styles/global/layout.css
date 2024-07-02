@@ -11,6 +11,11 @@ h3 {
   max-inline-size: 25ch;
 } */
 
+:root {
+  overflow-x: hidden;
+}
+
+
 /* Container 
   Horizontally centered
   Customizable max width, default of 85rem or 1360px
@@ -19,12 +24,13 @@ br-container {
   display: block;
   margin-inline: auto;
   padding-inline: var(--gutter);
-  padding-block: var(--padding-block, 1rem);
+  padding-block: var(--padding-block, 1.5rem);
   max-inline-size: var(--container-max-width, 85rem);
 }
 
-br-container :is(h1, header, hgroup) {
-  /* text-align: center; */
+br-container > header > hgroup {
+  text-align: center;
+  padding-block: var(--size-fluid-2, 1rem);
 }
 
 .hero br-container {
@@ -58,11 +64,17 @@ br-grid > br-grid-item > p {
   padding: var(--gutter, 1rem);
 }
 
+br-grid > :is(img, picture, video, figure) {
+  justify-self: center;
+}
 
+.posts br-grid {
+  --grid-placement: auto-fill;
+}
 
-br-grid [data-layout="50-50"] {
+br-grid[data-layout="50-50"] {
   --grid-min-item-size: clamp(16rem, 50vw, 26rem);
-  /* --grid-placement: auto-fit; */
+  --grid-placement: auto-fit;
 }
 
 

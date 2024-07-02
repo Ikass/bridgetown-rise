@@ -20,3 +20,17 @@ article > article-body {
 body > footer {
   background-color: var(--gray-4);
 }
+
+/* Line 648 */
+body>header,
+body>main,
+body>footer {
+  padding-block: 0;
+}
+
+/**
+ * Section
+ */
+section {
+  margin-bottom: 0;
+}

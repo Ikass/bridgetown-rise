@@ -12,6 +12,8 @@
       </p>
     </div>
 
+
+    <%# TODO: Fix the left margin conflict with PicoCSS %>
     <nav>
       <p class="text-bold">Quick Links</p>
       <ul role="list">
@@ -28,15 +30,17 @@
       <nav id="social" class="site-foot__inner" aria-label="Social links">
         
         <%# TODO: refactor into a flex container %>
-        <% site.data.social_svg.each do |item| %>
+        <% site.data.social_icons.each do |item| %>
           <a href="<%= item.url %>" class="flex">
             <span class="sr-only"><%= item.title %></span>
-            <sl-icon-button name="<%= item.icon %>" label="<%= item.title %>"></sl-icon-button>
+            <% svg_file = item.icon %>
+            <%= svg "/images/svg/" + svg_file + ".svg" %>
           </a>
         <% end %>
 
       </nav>
     </div>
+
     
   </br-grid>
 </br-container>
