@@ -28,11 +28,11 @@ Make components, using the Declarative Shadow DOM approach.
   <picture>
     <source srcset="/images/<%= data.hero_image %>-1200w.webp 1200w,
                     /images/<%= data.hero_image %>-1920w.webp 1920w,
-                    /images/<%= data.hero_image %>-2400w.webp 2400w, 
+                    /images/<%= data.hero_image %>-2400w.webp 2400w" 
                     type="image/webp">
     <source srcset="/images/<%= data.hero_image %>-1200w.jpg 1200w,
                     /images/<%= data.hero_image %>-1920w.jpg 1920w,
-                    /images/<%= data.hero_image %>-2400w.jpg 2400w," 
+                    /images/<%= data.hero_image %>-2400w.jpg 2400w"
                     type="image/jpeg">
     <img src="images/<%= data.hero_image %>-1200w.jpg" width="1200" height="806" loading="lazy">
   </picture>
