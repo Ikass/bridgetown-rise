@@ -16,13 +16,13 @@ body > footer > grid-container[data-layout="full-bleed"] {
     --background-color: var(--color-dark);
 }
 
-body > footer > br-grid {
+body > footer br-grid {
     --grid-layout-columns: 2fr 1fr 1fr;
     --external-link: url("/images/svg/external-link-light.svg");
     padding: var(--gutter);
 }
 
-body > footer > footer {
+body footer > footer {
     display: flex;
     justify-content: center;
 }
@@ -39,7 +39,7 @@ body > footer nav > ul {
     margin-inline-start: 0;
 }
 
-body > footer > br-grid #social {
+body > footer br-grid #social {
     flex-wrap: wrap;
     justify-content: flex-start;
 }

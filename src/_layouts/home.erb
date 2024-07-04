@@ -2,13 +2,23 @@
 layout: default
 ---
 
-<%= render "hero" %>
+<%= render "home/hero" %>
 <%# render Shared::Hero.new(metadata: site.metadata, resource: resource, data: data) %>
 
 <br-container data-layout="content">
     <%= yield %>
 </br-container>
 
-<%= render "features" %>
+<%# render "home/features" %>
 
-<%= render "full_bleed" %>
+<%= render "home/problems" %>
+
+<%= render "home/beliefs" %>
+
+<%= render "home/solution" %>
+
+<%= render "home/benefits" %>
+
+<%= render "home/process" %>
+
+<%= render "home/features_section" %>

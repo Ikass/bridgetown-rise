@@ -61,7 +61,7 @@ br-grid {
 }
 
 br-grid > br-grid-item > p {
-  padding: var(--gutter, 1rem);
+  /* padding: var(--gutter, 1rem); */
 }
 
 br-grid > :is(img, picture, video, figure) {
