@@ -77,7 +77,25 @@ br-grid[data-layout="50-50"] {
   --grid-placement: auto-fit;
 }
 
+/* Styling SVG icons in Article cards */
+/* SVG container to vertically center the icon */
+article > svg-container {
+  position: relative;
+  background-color: var(--gray-2);
+  border-radius: 50%;
+  padding: 20px;
+  margin-inline-end: auto;
+}
 
+article > svg-container svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-width: var(--size-fluid-3);
+  height: auto;
+}
 
 
 /*** WRAPPER

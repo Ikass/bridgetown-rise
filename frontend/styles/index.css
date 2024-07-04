@@ -4,7 +4,7 @@
 /* Define CSS Layers */
 @layer global, composition, blocks, utilities;
 
-@import "pico/pico.css";
+@import "pico/pico.css" layer(global);
 @import "variables/_all.css" layer(global);
 @import "global/_all.css" layer(global);
 /* @import "compositions/_all.css" layer(composition); */
