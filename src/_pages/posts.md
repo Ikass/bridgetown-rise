@@ -37,17 +37,25 @@ paginate:
 
 
 <% if paginator.total_pages > 1 %>
-
+<!-- <nav role="navigation" aria-label="Pagination Navigation"> -->
+<br-container>
   <ul class="pagination">
     <% if paginator.previous_page %>
-    <li>
-      <a href="<%= paginator.previous_page_path %>">Previous Page</a>
+    <li class="pagination-left">
+      <a href="<%= paginator.previous_page_path %>">
+        <button>Previous</button>
+      </a>
     </li>
     <% end %>
     <% if paginator.next_page %>
-    <li>
-      <a href="<%= paginator.next_page_path %>">Next Page</a>
+    <li class="pagination-right">
+      <a href="<%= paginator.next_page_path %>">
+        <button>Next</button>
+      </a>
     </li>
     <% end %>
   </ul>
+
+<!-- </nav> -->
+</br-container>
 <% end %>

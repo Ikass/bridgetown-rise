@@ -220,3 +220,64 @@ grid-container[data-layout="full-bleed"] > * {
 body > footer > grid-container[data-layout="full-bleed"] {
   --padding-block: var(--size-fluid-2);
 }
+
+
+/* Pagination */
+
+ul.pagination {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "left"
+    "right";
+  gap: var(--size-fluid-2);
+  padding: 0;
+}
+
+@media (width >=35em) {
+  .pagination {
+    grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+    grid-template-areas: "left right";
+  }
+}
+
+ul.pagination>li {
+  list-style: none;
+  margin: 0;
+}
+
+ul.pagination > li.pagination-left {
+  grid-area: left;
+}
+
+ul.pagination > li.pagination-right {
+  grid-area: right;
+}
+
+/* ****************** */
+/* Pagination styling */
+/* ****************** */
+
+.paginate {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+  grid-template-areas: "left right";
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0 !important;
+  justify-content: center;
+}
+
+.paginate-left {
+  grid-area: left;
+  justify-self: right;
+}
+
+.paginate-right {
+  grid-area: right;
+  justify-self: left;
+}
+
+.paginate li+li {
+  margin: 0;
+}
