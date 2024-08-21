@@ -26,6 +26,7 @@ It uses progressive enhancement, CSS layout, fluid type & spacing, as well as mo
 - Built with [Bridgetown](https://www.bridgetownrb.com).
 - [RedHat](https://github.com/RedHatOfficial/RedHatFont) variable typeface, locally served.
 - Justin Ribeiro's [`lite-youtube`](https://github.com/justinribeiro/lite-youtube) plugin.
+- Slightlyoff's [`lite-vimeo`](https://github.com/slightlyoff/lite-vimeo) plugin.
 - [Bridgetown SEO Tag](https://github.com/bridgetownrb/bridgetown-seo-tag) plugin for better SEO.
 - Opens external links and PDFs in a new window. Thanks to Joost van der Schee from [JekyllCodex](http://jekyllcodex.org/).
 - Favicon generated with [Favicon.io](https://favicon.io/)
@@ -38,8 +39,7 @@ It uses progressive enhancement, CSS layout, fluid type & spacing, as well as mo
 - [x] Accessible, responsive and robust main navigation.
 - [x] SEO basics.
 - [x] Sitemap.
-- [ ] Add `lite-vimeo` plugin as well.
-- [ ] Activate/load `lite-youtube` only with `youtue: true` in front-matter.
+- [ ] Activate/load `lite-youtube/vimeo` only with `youtube/vimeo: true` in front-matter.
 - [x] Inline SVG files.
 - [x] Open external links in a new tab/window.
 - [ ] Create basic components/layouts.

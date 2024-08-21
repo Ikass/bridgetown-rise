@@ -4,7 +4,7 @@ title: Blog Posts
 page_class: posts
 paginate:
   collection: posts
-  per_page: 6
+  per_page: 3
 ---
 
 <!-- <section class="grid container"> -->
@@ -43,14 +43,14 @@ paginate:
     <% if paginator.previous_page %>
     <li class="pagination-left">
       <a href="<%= paginator.previous_page_path %>">
-        <button>Previous</button>
+        <button class="outline">Previous Page</button>
       </a>
     </li>
     <% end %>
     <% if paginator.next_page %>
     <li class="pagination-right">
       <a href="<%= paginator.next_page_path %>">
-        <button>Next</button>
+        <button class="outline">Next Page</button>
       </a>
     </li>
     <% end %>

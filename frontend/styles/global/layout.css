@@ -1,25 +1,15 @@
-/* Set line lengths */
-/* p,
-li,
-blockquote:not([class]) {
-  max-inline-size: 65ch;
-}
-
-h1,
-h2,
-h3 {
-  max-inline-size: 25ch;
-} */
-
 :root {
   overflow-x: hidden;
 }
 
 
-/* Container 
+/* CONTAINER 
   Horizontally centered
   Customizable max width, default of 85rem or 1360px
+  Inspired by:
+    https: //piccalil.li/quick-tip/use-css-clamp-to-create-a-more-flexible-wrapper-utility/
 */
+
 br-container {
   display: block;
   margin-inline: auto;
@@ -43,7 +33,11 @@ br-container[data-layout="content"] {
 }
 
 
-/* Grid */
+/* GRID */
+/* Related Every Layout: https://every-layout.dev/layouts/grid/
+  Inspired by: 
+    https://piccalil.li/tutorial/create-a-responsive-grid-layout-with-no-media-queries-using-css-grid/
+*/
 br-grid {
   /* --grid-min-item-size: var(--size-fluid-9); */
   display: grid;
@@ -51,17 +45,10 @@ br-grid {
                             repeat(var(--grid-placement, auto-fit),
                             minmax(var(--grid-min-item-size, 16rem), 1fr)));
   gap: var(--gutter);
-  /* max-width: var(--wrapper-width, 85rem); */
   max-inline-size: var(--grid-max-width, 85rem);
   align-items: var(--grid-alignment, start);
   margin-inline: auto;
-  /* padding-inline: var(--gutter, 1rem); */
-  /* padding-block: var(--padding-block, 1rem); */
   background-color: var(--grid-bg-color);
-}
-
-br-grid > br-grid-item > p {
-  /* padding: var(--gutter, 1rem); */
 }
 
 br-grid > :is(img, picture, video, figure) {
@@ -77,159 +64,18 @@ br-grid[data-layout="50-50"] {
   --grid-placement: auto-fit;
 }
 
-/* Styling SVG icons in Article cards */
-/* SVG container to vertically center the icon */
-article > svg-container {
-  position: relative;
-  background-color: var(--gray-2);
-  border-radius: 50%;
-  padding: 20px;
-  margin-inline-end: auto;
-}
 
-article > svg-container svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100%;
-  max-width: var(--size-fluid-3);
-  height: auto;
-}
-
-
-/*** WRAPPER
- * Sets a max width, adds a consistent gutter and horizontally
- * centers the contents
- * Info: https://piccalil.li/quick-tip/use-css-clamp-to-create-a-more-flexible-wrapper-utility/
- */
-
-.wrapper {
-  max-inline-size: var(--wrapper-max-width, 85rem);
-  margin-inline: auto;
-  padding-inline: var(--gutter);
-}
-
-be-wrapper {
-  --wrapper-max-width: 85rem; /* Default max-width, can be overridden */
-  display: block;
-  max-width: var(--wrapper-max-width);
-  margin: 0 auto; /* Center the container horizontally */
-  padding-inline: var(--gutter);
-}
-
-be-wrapper :is(h1, hgroup) {
-  text-align: center;
-  margin-block: var(--size-fluid-2);
-}
-
-be-wrapper[data-size="xl"] {
-  --wrapper-max-width: var(--wrapper-xl);
-}
-
-/* AUTO GRID
-Related Every Layout: https://every-layout.dev/layouts/grid/
-More info on the flexible nature: https://piccalil.li/tutorial/create-a-responsive-grid-layout-with-no-media-queries-using-css-grid/
-A flexible layout that will create an auto-fill grid with configurable grid item sizes
-*/
-
-/* TODO: refactor to web components with Declarative Shadow DOM */
-
-grid-container {
-  /* --grid-alignment: center; */
-  --grid-min-item-size: var(--size-fluid-8);
-  display: grid;
-  grid-template-columns: var(
-    --grid-layout-columns,
-    repeat(
-      var(--grid-placement, auto-fill),
-      minmax(var(--grid-min-item-size, 16rem), 1fr)
-    )
-  );
-  gap: var(--gutter);
-  max-width: var(--wrapper-width, 85rem);
-  align-items: var(--grid-alignment, start);
-  margin-inline: auto;
-  padding-block: var(--padding-block, 1rem);
-  background-color: var(--background-color);
-}
-
-grid-container :is(h1, header, hgroup) {
-  text-align: center;
-  grid-column: 1 / -1;
-}
-
-grid-container :is(h1, h2, h3, hgroup) {
-  margin-block-start: var(--gutter);
-}
-
-grid-container[data-layout="content"] {
-  --content-width: var(--wrapper-md);
-  --grid-layout-columns: 1fr minmax(auto, var(--content-width)) 1fr;
-  --grid-min-item-size: ;
-  --wrapper-width: var(--wrapper-xl);
-  --padding-block: var(--size-fluid-5);
-}
-
-grid-container[data-layout="content"] > * {
-  grid-column: 2;
-}
-
-grid-container[data-layout="50-50"] {
-  --grid-min-item-size: clamp(16rem, 50vw, 26rem);
-  /* --grid-placement: auto-fit; */
-}
-
-grid-container[data-layout="features"] {
-  --grid-min-item-size: clamp(16rem, 50vw, 30rem);
-  /* --background-color: var(--orange-3); */
-}
-
-grid-container[data-layout="features"] > be-grid-item {
-  display: flex;
-  background-color: var(--orange-3);
-  padding: var(--gutter);
-  align-self: stretch;
-  border-radius: var(--radius-3);
-}
-
-grid-container[data-layout="features"] > be-grid-item:has(img) {
-  /* padding: 0; */
-  justify-content: center; /* center img */
-}
-
-grid-container[data-rows="3-2"] {
-  --grid-layout-columns: 3fr 2fr; /* 3/5 and 2/5 layout */
-}
-
-grid-container[data-layout="full-bleed"] {
-  --background-color: var(--stone-3);
-  --content-width: var(--wrapper-lg);
-  --grid-layout-columns: 1fr minmax(auto, var(--content-width)) 1fr;
-  --padding-block: var(--size-fluid-4);
-  --wrapper-width: 100%;
-  background-color: var(--background-color);
-}
-
-grid-container[data-layout="full-bleed"] > * {
-  /* grid-column: 1 / -1; */
-  grid-column: 2;
-  margin-inline: auto;
-}
-
-body > footer > grid-container[data-layout="full-bleed"] {
-  --padding-block: var(--size-fluid-2);
-}
-
-
-/* Pagination */
+/* PAGINATION */
 
 ul.pagination {
-  display: grid;
+  /* display: grid;
   grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
-  grid-template-areas: "left right";
+  grid-template-areas: "left right"; */
+  display: flex;
+  justify-content: space-around;
   gap: var(--size-fluid-2);
   padding: 0;
+  margin: 0;
 }
 
 ul.pagination>li {
@@ -246,3 +92,10 @@ ul.pagination > li.pagination-right {
   grid-area: right;
   justify-self: left;
 }
+
+
+/* TODO: add `lite-vimeo` */
+lite-youtube {
+  aspect-ratio: 16 / 9;
+}
+
