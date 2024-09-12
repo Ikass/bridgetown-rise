@@ -45,15 +45,21 @@
   line-height: var(--font-lineheight-1);
   font-weight: var(--font-weight-9);
   text-wrap: balance;
+  font-family: var(--font-display);
 }
 
 :where(h1) {
-  font-size: var(--font-size-8);
+  font-size: var(--font-size-fluid-3);
   /* max-inline-size: var(--size-header-1); */
 }
 
 :where(h2) {
-  font-size: var(--font-size-6);
+  font-size: var(--font-size-fluid-2);
+  /* max-inline-size: var(--size-header-2); */
+}
+
+:where(h3) {
+  font-size: var(--font-size-fluid-1);
   /* max-inline-size: var(--size-header-2); */
 }
 
@@ -67,6 +73,12 @@
 
 :where(p, ul, ol, dl, h6) {
   font-size: var(--font-size-2);
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
 }
 
 :where(a, u, ins, abbr) {

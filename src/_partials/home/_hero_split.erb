@@ -1,13 +1,4 @@
 <%# TODO: refactor into a component with multiple versions %>
-<section id="hero" class="flow" data-layout="hero-single">
-    <br-container>
-        <hgroup>
-            <h1><%= data.title %></h1>
-            <p><%= data.subtitle %></p>
-        </hgroup>
-    </br-container>
-</section>
-
 <section id="hero" data-layout="hero-split">
     <br-container>
         <br-grid data-layout="50-50">
@@ -36,40 +27,15 @@
 
 <style>
 
-    section#hero[data-layout="hero-single"] {
-        padding-block: var(--size-fluid-8);
-        background-image: var(--gradient-25);
-        background-image: var(--hero-gradient-2);
-
-        /* https://www.debugbear.com/blog/responsive-images#css-syntax-for-responsive-background-images */
-        /* Fallback */
-        background-image: var(--hero-gradient-2), url("/images/hero/<%= data.image %>-1200w.jpg");
-
-        /* Prefixed */
-        background-image: var(--hero-gradient-2), -webkit-image-set(
-            url("/images/hero/<%= data.image %>-1200w.webp") type("image/webp"),
-            url("/images/hero/<%= data.image %>-1200w.jpg") type("image/jpeg")
-        );
-
-        /* Default */
-        background-image: var(--hero-gradient-2), image-set(
-            url("/images/hero/<%= data.image %>-1200w.webp") type("image/webp"),
-            url("/images/hero/<%= data.image %>-1200w.jpg") type("image/jpeg")
-        );
-
-        background-size: cover;
-    }
-
     section[data-layout="hero-split"] {
         padding-block: var(--size-fluid-6);
-        background-color: var(--gradient-3);
-        background-image: var(--hero-gradient);
+        // background-color: var(--gradient-3);
+        // background-image: var(--hero-gradient);
     }
 
     section[data-layout="hero-split"] > br-container > br-grid[data-layout="50-50"] {
         --grid-alignment: center;
         text-align: left;
     }
-
 
 </style>

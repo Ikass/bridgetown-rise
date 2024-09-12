@@ -5,7 +5,7 @@
 
   --gutter: var(--size-fluid-2);
   --padding-inline: var(--size-fluid-2);
-  --padding-block: var(--size-fluid-4);
+  --padding-block: var(--size-fluid-5);
 
   --transition-base: 250ms ease;
   --transition-movement: 200ms linear;
@@ -14,7 +14,7 @@
   --tracking: -0.05ch;
   --tracking-s: -0.075ch;
 
-  /* --color-primary: var(--orange-6); */
+  --color-primary: var(--orange-6);
   --color-dark: var(--stone-10);
   --color-light: var(--stone-0);
 
@@ -59,8 +59,8 @@ br-grid {
   /* --grid-min-item-size: var(--size-fluid-9); */
   display: grid;
   grid-template-columns: var(--grid-layout-columns,
-                            repeat(var(--grid-placement, auto-fit),
-                            minmax(var(--grid-min-item-size, 16rem), 1fr)));
+                        repeat(var(--grid-placement, auto-fit),
+                        minmax(var(--grid-min-item-size, 16rem), 1fr)));
   gap: var(--gutter);
   max-inline-size: var(--grid-max-width, 85rem);
   align-items: var(--grid-alignment, start);
@@ -112,7 +112,7 @@ ul.pagination > li.pagination-right {
 
 
 /* TODO: add `lite-vimeo` */
-lite-youtube {
+lite-youtube, lite-vimeo {
   aspect-ratio: 16 / 9;
 }
 

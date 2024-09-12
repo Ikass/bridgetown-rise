@@ -47,6 +47,7 @@ body > footer nav > ul {
 }
 
 body > footer br-grid #social {
+    display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: var(--size-fluid-1);

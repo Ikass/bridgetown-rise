@@ -1,16 +1,11 @@
-/*
-  Global styles
+/* Global styles */
 
-  Low-specificity, global styles that apply to the whole
-  project: https://cube.fyi/css.html
-*/
 body {
   color: var(--color-dark);
   background: var(--color-light);
   font-size: var(--font-size-fluid-1);
-  font-family: var(--font-base);
-  line-height: 1.4;
-  /* letter-spacing: var(--tracking); */
+  /* font-family: var(--font-base); */
+  /* line-height: 1.4; */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -19,40 +14,6 @@ body {
 /* make the footer 'sticky' */
 main {
   flex-grow: 1;
-}
-
-/* Base typesetting */
-h1,
-h2,
-h3 {
-  line-height: 1;
-  letter-spacing: var(--tracking-s);
-  font-family: var(--font-display);
-}
-
-h1 {
-  font-size: var(--font-size-fluid-3);
-}
-
-h2 {
-  font-size: var(--font-size-fluid-2);
-}
-
-h3 {
-  font-size: var(--font-size-fluid-1);
-}
-
-/* Set line lengths */
-p,
-li,
-blockquote:not([class]) {
-  /* max-inline-size: 50ch; */
-}
-
-h1,
-h2,
-h3 {
-  /* max-inline-size: 20ch; */
 }
 
 blockquote {
@@ -106,29 +67,12 @@ main:focus {
   outline: none;
 }
 
-/* add icon for external links */
-article [href^="http"]:not([href*="http://localhost:4000"])::after
-{
-  display: inline-block;
-  inline-size: 1em;
-  block-size: 1em;
-  /* background-image: var( --external-link, url("/images/svg/external-link-line.svg")); */
-  background-image: var(--external-link, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z'%3E%3C/path%3E%3C/svg%3E"));
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 60% auto;
-  /* alternative text rules */
-  content: "(external link)";
-  overflow: hidden;
-  white-space: nowrap;
-  text-indent: 1em; /* the width of the icon */
-}
 
 /* Base selection styles that invert whatever colours are rendered */
-::selection {
+/* ::selection {
   background: var(--color-primary);
   color: var(--color-light);
-}
+} */
 
 .preload-transitions * {
   transition: none !important;
