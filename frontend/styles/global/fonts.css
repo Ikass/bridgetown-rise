@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'RedHatDisplay';
+  src: url("../fonts/redhat/RedHatDisplayVFModified.woff2") format('woff2-variations');
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'RedHatDisplay';
+  src: url("../fonts/redhat/RedHatDisplayVF-ItalicModified.woff2") format('woff2-variations');
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'RedHatText';
+  src: url("../fonts/redhat/RedHatTextVFModified.woff2") format('woff2-variations');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'RedHatText';
+  src: url("../fonts/redhat/RedHatTextVF-ItalicModified.woff2") format('woff2-variations');
+  font-weight: 400 900;
+  font-style: italic;
+  font-display: fallback;
+}
+
+
+@font-face {
+  font-family: "RobotoMono";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: local(""),
+    url(../fonts/robotomono/robotomono-variablefont_wght-webfont.woff2)
+      format("woff2");
+}

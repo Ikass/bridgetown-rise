@@ -1,0 +1,98 @@
+body > header > br-container {
+  --padding-block: var(--size-fluid-2);
+}
+
+
+/* *********************** */
+/* wrapper for site header */
+/* *********************** */
+site-header {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  /* max-inline-size: var(--wrapper-max-width, 85rem); */
+  margin-inline: auto;
+  /* padding-inline: var(--gutter); */
+}
+
+site-header #logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  letter-spacing: var(--tracking-s);
+  padding: var(--space-xs) 0;
+}
+
+site-header #logo:hover {
+  text-decoration: none;
+}
+
+site-header a {
+  text-decoration: none;
+}
+
+
+/* '#main-nav' */
+site-header > nav {
+  display: var(--display, none);
+  grid-column: 1 / span 2;
+  justify-self: var(--justify, center);
+}
+
+site-header > nav ul {
+  display: flex;
+  flex-direction: var(--flex-direction, column);
+  gap: var(--gutter);
+}
+
+site-header > nav a:hover {
+    text-decoration: underline solid var(--color-primary) 2px;
+    text-underline-offset: 0.25em;
+}
+
+@media (width >=35em) {
+  site-header>nav {
+    --justify: end;
+    --display: flex;
+    grid-column: 2;
+  }
+
+  site-header>nav ul {
+    --flex-direction: row;
+  }
+
+  #hamburger {
+    --nav-button-display: none;
+  }
+}
+
+/* Mobile menu button */
+
+#hamburger {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 0;
+  cursor: pointer;
+  display: var(--nav-button-display, flex);
+  gap: 0.5em;
+  justify-self: end;
+  color: inherit;
+}
+
+#hamburger[aria-expanded="true"]+#main-nav {
+  --display: flex;
+}
+
+/* hamburger icon from https://remixicon.com/ */
+#hamburger::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: var(--size-fluid-2);
+  width: var(--size-fluid-2);
+}
+
+#hamburger[aria-expanded="true"]::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z'%3E%3C/path%3E%3C/svg%3E");
+}

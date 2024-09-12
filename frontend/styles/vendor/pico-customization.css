@@ -1,0 +1,36 @@
+/************************** 
+* Article as a Card
+* Maybe it would be better to use a custom HTML element like `br-card`?
+* As a light-weight Shoelace alternative.
+***************************/
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+article > article-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+body > footer {
+  background-color: var(--gray-4);
+}
+
+/* Line 648 */
+body>header,
+body>main,
+body>footer {
+  padding-block: 0;
+}
+
+/**
+ * Section
+ */
+section {
+  margin-bottom: 0;
+}

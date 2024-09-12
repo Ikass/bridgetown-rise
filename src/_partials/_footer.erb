@@ -1,0 +1,45 @@
+<footer class="site-foot flow">
+  <article class="wrapper grid">
+    <div class="flow">
+      <p class="text-bold">
+        Bridgetown Excellent
+      </p>
+      <p>
+        An (opiniated) Bridgetown starter, based on Andy Bell’s talk “Be the browser’s mentor, not its micromanager”.
+      </p>
+    </div>
+
+
+    <div class="flow">
+      <p class="text-bold">Quick Links</p>
+      <ul role="list">
+        <% site.data.nav.each do |item| %>
+          <li>
+            <%= link_to item.title, item.url %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="flow">
+      <p class="text-bold">Social Links</p>
+      <nav id="social" class="site-foot__inner" aria-label="Social links">
+        
+        <% site.data.social_svg.each do |item| %>
+          <a href="<%= item.url %>" class="flex">
+            <span class="sr-only"><%= item.title %></span>
+            <sl-icon-button name="<%= item.icon %>" label="<%= item.title %>"></sl-icon-button>
+          </a>
+        <% end %>
+
+      </nav>
+    </div>
+
+  </article>
+  <div class="site-foot__inner centered text-step-0">
+    <p>&copy; 2023</p>
+    <p>Developed by 
+      <a href="https://grittypublishing.com">Gritty Publishing</a>
+    </p>
+  </div>
+</footer>

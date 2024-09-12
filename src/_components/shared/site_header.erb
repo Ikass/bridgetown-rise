@@ -1,0 +1,27 @@
+<header role="banner">
+  <br-container>
+    <site-header class="">
+      <a href="/" id="logo">
+        <%# <sl-icon src="/images/logo.svg" style="width: 1.5em; height: 1.5em;"></sl-icon> %>
+        <%= site.metadata.title %>
+      </a>
+
+      <button 
+        id="hamburger" 
+        aria-label="Menu" 
+        aria-expanded="false" 
+        aria-controls="main-nav">
+          Menu
+      </button>
+
+      <nav id="main-nav" class="main-nav">
+          <ul role="list">
+              <% site.data.nav.each do |item| %>
+                  <li><%= link_to item.title, item.url %></li>
+              <% end %>
+          </ul>
+      </nav>
+
+    </site-header>
+  </br-container>
+</header>

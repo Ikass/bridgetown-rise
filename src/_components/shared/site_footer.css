@@ -1,0 +1,63 @@
+/* ************************ */
+/* TODO: Fix the left margin conflict with PicoCSS */
+/* ************************ */
+
+body > footer {
+    background: var(--color-dark);
+    /* background-image: var(--gradient-23); */
+    color: var(--color-light);
+    font-size: var(--font-size-fluid-0);
+}
+
+body > footer nav > ul > li {
+    padding: 0;
+}
+
+body > footer > grid-container[data-layout="full-bleed"] {
+    /* --background-color: var(--color-dark); */
+    background-image: var(--gradient-23);
+}
+
+body > footer br-grid {
+    /* --grid-layout-columns: 2fr 1fr 1fr; */
+    --external-link: url("/images/svg/external-link-light.svg");
+    padding: var(--gutter);
+}
+
+body>footer br-grid>*:first-child {
+    /* grid-column: span 2; */
+}
+
+
+body footer > footer {
+    display: flex;
+    justify-content: center;
+}
+
+body > footer nav:not(#social) {
+    display: flex;
+    flex-direction: column;
+}
+
+body > footer nav > ul {
+    align-items: start; 
+    display: flex;
+    flex-direction: column;
+    margin-inline-start: 0;
+}
+
+body > footer br-grid #social {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: var(--size-fluid-1);
+}
+
+body > footer br-grid nav#social > a {
+    color: var(--color-light);
+    color: #c2c7d0; /* Pico text color  */
+}
+
+body > footer br-grid nav#social > a:hover {
+    color: var(--pico-color);
+}
+

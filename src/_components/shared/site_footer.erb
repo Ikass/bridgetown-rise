@@ -1,0 +1,54 @@
+<footer data-theme="dark" class="">
+<br-container>
+
+  <br-grid>
+  
+    <div class="flow">
+      <p class="text-bold">
+        Bridgetown Rise
+      </p>
+      <p>
+        A Bridgetown starter template using modern vanilla CSS, fluid type, fluid spacing, flexible layout and progressive enhancement and other goodies.
+      </p>
+    </div>
+
+
+    <%# TODO: Fix the left margin conflict with PicoCSS %>
+    <nav>
+      <p class="text-bold">Quick Links</p>
+      <ul role="list">
+        <% site.data.nav.each do |item| %>
+          <li>
+            <%= link_to item.title, item.url %>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+
+    <div class="flow">
+      <p class="text-bold">Social Links</p>
+      <nav id="social" class="" aria-label="Social links">
+        
+        <%# TODO: refactor into a flex container %>
+        <% site.data.social_icons.each do |item| %>
+          <a href="<%= item.url %>" class="flex">
+            <span class="sr-only"><%= item.title %></span>
+            <% svg_file = item.icon %>
+            <%= svg "/images/svg/" + svg_file + ".svg" %>
+          </a>
+        <% end %>
+
+      </nav>
+    </div>
+
+    
+  </br-grid>
+</br-container>
+
+  <footer>
+      <p>&copy; <%= site.time.strftime("%Y") %> Developed by 
+      <a href="https://grittypublishing.com">Gritty Publishing</a>
+    </p>
+  </footer>
+
+</footer>

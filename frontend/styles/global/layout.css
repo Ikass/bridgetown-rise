@@ -1,0 +1,118 @@
+/* Global variables */
+
+:root {
+  --border-radius: 0.5rem;
+
+  --gutter: var(--size-fluid-2);
+  --padding-inline: var(--size-fluid-2);
+  --padding-block: var(--size-fluid-4);
+
+  --transition-base: 250ms ease;
+  --transition-movement: 200ms linear;
+  --transition-fade: 200ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+  --tracking: -0.05ch;
+  --tracking-s: -0.075ch;
+
+  /* --color-primary: var(--orange-6); */
+  --color-dark: var(--stone-10);
+  --color-light: var(--stone-0);
+
+}
+
+/* CONTAINER 
+  Horizontally centered
+  Customizable max width, default of 85rem or 1360px
+  Inspired by:
+    https: //piccalil.li/quick-tip/use-css-clamp-to-create-a-more-flexible-wrapper-utility/
+*/
+
+br-container {
+  display: block;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  padding-block: var(--padding-block, 1.5rem);
+  max-inline-size: var(--container-max-width, 85rem);
+}
+
+br-container > header > hgroup {
+  text-align: center;
+  padding-block: var(--size-fluid-2, 1rem);
+}
+
+.hero br-container {
+  --container-max-width: var(--wrapper-lg);
+  text-align: left;
+}
+
+br-container[data-layout="content"] {
+  --container-max-width: var(--wrapper-md);
+}
+
+
+/* GRID */
+/* Related Every Layout: https://every-layout.dev/layouts/grid/
+  Inspired by: 
+    https://piccalil.li/tutorial/create-a-responsive-grid-layout-with-no-media-queries-using-css-grid/
+*/
+br-grid {
+  /* --grid-min-item-size: var(--size-fluid-9); */
+  display: grid;
+  grid-template-columns: var(--grid-layout-columns,
+                            repeat(var(--grid-placement, auto-fit),
+                            minmax(var(--grid-min-item-size, 16rem), 1fr)));
+  gap: var(--gutter);
+  max-inline-size: var(--grid-max-width, 85rem);
+  align-items: var(--grid-alignment, start);
+  margin-inline: auto;
+  background-color: var(--grid-bg-color);
+}
+
+br-grid > :is(img, picture, video, figure) {
+  justify-self: center;
+}
+
+.posts br-grid {
+  --grid-placement: auto-fill;
+}
+
+br-grid[data-layout="50-50"] {
+  --grid-min-item-size: clamp(16rem, 50vw, 26rem);
+  --grid-placement: auto-fit;
+}
+
+
+/* PAGINATION */
+
+ul.pagination {
+  /* display: grid;
+  grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+  grid-template-areas: "left right"; */
+  display: flex;
+  justify-content: space-around;
+  gap: var(--size-fluid-2);
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination>li {
+  list-style: none;
+  margin: 0;
+}
+
+ul.pagination > li.pagination-left {
+  grid-area: left;
+  justify-self: right;
+}
+
+ul.pagination > li.pagination-right {
+  grid-area: right;
+  justify-self: left;
+}
+
+
+/* TODO: add `lite-vimeo` */
+lite-youtube {
+  aspect-ratio: 16 / 9;
+}
+

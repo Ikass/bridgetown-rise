@@ -1,0 +1,4 @@
+@import 'tiny-variables-light.css';
+@import 'tiny-variables-dark.css' (prefers-color-scheme: dark);
+
+@import 'tiny-core.css';
