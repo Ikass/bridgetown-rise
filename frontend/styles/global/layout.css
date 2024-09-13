@@ -38,7 +38,7 @@ br-grid {
   display: grid;
   grid-template-columns: var(--grid-layout-columns,
                         repeat(var(--grid-placement, auto-fit),
-                        minmax(var(--grid-min-item-size, 24rem), 1fr)));
+                        minmax(var(--grid-min-item-size, 20rem), 1fr)));
   gap: var(--gutter);
   max-inline-size: var(--grid-max-width, 90rem);
   align-items: var(--grid-alignment, start);

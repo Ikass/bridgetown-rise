@@ -5,7 +5,7 @@
 
   --gutter: var(--size-fluid-2);
   --padding-inline: var(--size-fluid-2);
-  --padding-block: var(--size-fluid-5);
+  /* --padding-block: var(--size-fluid-5); */
 
   --transition-base: 250ms ease;
   --transition-movement: 200ms linear;
@@ -34,6 +34,10 @@ body {
 /* make the footer 'sticky' */
 main {
   flex-grow: 1;
+}
+
+section {
+  padding-block: 1.5rem;
 }
 
 blockquote {
