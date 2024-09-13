@@ -1,11 +1,31 @@
+/* Global variables */
+
+:root {
+  --border-radius: 0.5rem;
+
+  --gutter: var(--size-fluid-2);
+  --padding-inline: var(--size-fluid-2);
+  --padding-block: var(--size-fluid-5);
+
+  --transition-base: 250ms ease;
+  --transition-movement: 200ms linear;
+  --transition-fade: 200ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+  --tracking: -0.05ch;
+  --tracking-s: -0.075ch;
+
+  --color-primary: var(--stone-6);
+  --color-dark: var(--stone-10);
+  --color-light: var(--stone-0);
+
+}
+
 /* Global styles */
 
 body {
   color: var(--color-dark);
   background: var(--color-light);
-  font-size: var(--font-size-fluid-1);
-  /* font-family: var(--font-base); */
-  /* line-height: 1.4; */
+  font-size: var(--font-size-fluid-0);
   display: flex;
   flex-direction: column;
   min-height: 100vh;

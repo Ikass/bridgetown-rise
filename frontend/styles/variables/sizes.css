@@ -55,4 +55,23 @@
     --wrapper-lg: 65rem;    /* 1040px */
     --wrapper-xl: 75rem;    /* 1200px */
     --wrapper-xxl: 85rem;    /* 1360px */
+
+    --size-relative-000: -.5ch;
+    --size-relative-00: -.25ch;
+    --size-relative-1: .25ch;
+    --size-relative-2: .5ch;
+    --size-relative-3: 1ch;
+    --size-relative-4: 1.25ch;
+    --size-relative-5: 1.5ch;
+    --size-relative-6: 1.75ch;
+    --size-relative-7: 2ch;
+    --size-relative-8: 3ch;
+    --size-relative-9: 4ch;
+    --size-relative-10: 5ch;
+    --size-relative-11: 7.5ch;
+    --size-relative-12: 10ch;
+    --size-relative-13: 15ch;
+    --size-relative-14: 20ch;
+    --size-relative-15: 30ch;
+
 }

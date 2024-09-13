@@ -12,15 +12,17 @@
 code {
   padding: 0.125em 0.4em;
   font-family: var(--font-mono);
-  background: var(--color-dark);
+  /* background: var(--color-dark); */
+  background-color: #272822;
   border-radius: var(--border-radius);
   color: var(--color-light);
-  font-size: var(--size-step-0);
+  font-size: var(--font-size-fluid-1);
 }
 
 pre.highlight {
-  padding: var(--space-s);
-  background-color: var(--color-dark);
+  padding: var(--size-fluid-1);
+  /* background-color: var(--color-dark); */
+  background-color: #272822;
   border-radius: var(--border-radius);
 }
 

@@ -5,4 +5,4 @@
 @import "global/_all.css" layer(global);
 @import "utilities/_all.css" layer(utilities);
 
-/* @import "vendor/_all.css" layer(global); */
+@import "vendor/_all.css" layer(global);

@@ -1,30 +1,7 @@
-/* Global variables */
-
-:root {
-  --border-radius: 0.5rem;
-
-  --gutter: var(--size-fluid-2);
-  --padding-inline: var(--size-fluid-2);
-  --padding-block: var(--size-fluid-5);
-
-  --transition-base: 250ms ease;
-  --transition-movement: 200ms linear;
-  --transition-fade: 200ms ease;
-  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
-  --tracking: -0.05ch;
-  --tracking-s: -0.075ch;
-
-  --color-primary: var(--orange-6);
-  --color-dark: var(--stone-10);
-  --color-light: var(--stone-0);
-
-}
 
 /* CONTAINER 
   Horizontally centered
-  Customizable max width, default of 85rem or 1360px
-  Inspired by:
-    https: //piccalil.li/quick-tip/use-css-clamp-to-create-a-more-flexible-wrapper-utility/
+  Customizable max width, default of 90rem or 1440px.
 */
 
 br-container {
@@ -32,7 +9,7 @@ br-container {
   margin-inline: auto;
   padding-inline: var(--gutter);
   padding-block: var(--padding-block, 1.5rem);
-  max-inline-size: var(--container-max-width, 85rem);
+  max-inline-size: var(--container-max-width, 90rem);
 }
 
 br-container > header > hgroup {
@@ -49,20 +26,21 @@ br-container[data-layout="content"] {
   --container-max-width: var(--wrapper-md);
 }
 
+br-container > br-container {
+  padding-inline: 0;
+}
+
 
 /* GRID */
-/* Related Every Layout: https://every-layout.dev/layouts/grid/
-  Inspired by: 
-    https://piccalil.li/tutorial/create-a-responsive-grid-layout-with-no-media-queries-using-css-grid/
-*/
+
 br-grid {
   /* --grid-min-item-size: var(--size-fluid-9); */
   display: grid;
   grid-template-columns: var(--grid-layout-columns,
                         repeat(var(--grid-placement, auto-fit),
-                        minmax(var(--grid-min-item-size, 16rem), 1fr)));
+                        minmax(var(--grid-min-item-size, 24rem), 1fr)));
   gap: var(--gutter);
-  max-inline-size: var(--grid-max-width, 85rem);
+  max-inline-size: var(--grid-max-width, 90rem);
   align-items: var(--grid-alignment, start);
   margin-inline: auto;
   background-color: var(--grid-bg-color);
@@ -83,6 +61,10 @@ br-grid[data-layout="50-50"] {
 
 
 /* PAGINATION */
+
+br-container#pagination {
+  padding-block: 0;
+}
 
 ul.pagination {
   /* display: grid;
@@ -116,3 +98,19 @@ lite-youtube, lite-vimeo {
   aspect-ratio: 16 / 9;
 }
 
+/* CARD */
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  box-shadow: var(--shadow-4);
+  padding: var(--gutter);
+}
+
+section-label {
+  font-size: var(--font-size-0);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-7);
+  color: var(--stone-7);
+}

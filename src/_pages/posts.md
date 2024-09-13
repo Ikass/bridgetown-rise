@@ -4,10 +4,9 @@ title: Blog Posts
 page_class: posts
 paginate:
   collection: posts
-  per_page: 3
+  per_page: 6
 ---
 
-<!-- <section class="grid container"> -->
 <br-container>
   <br-grid>
     <% paginator.resources.each do |post| %>
@@ -32,13 +31,11 @@ paginate:
       </article>
     <% end %>
   </br-grid>
-</br-container>  
-<!-- </section> -->
-
+</br-container>
 
 <% if paginator.total_pages > 1 %>
 <!-- <nav role="navigation" aria-label="Pagination Navigation"> -->
-<br-container>
+<br-container id="pagination">
   <ul class="pagination">
     <% if paginator.previous_page %>
     <li class="pagination-left">

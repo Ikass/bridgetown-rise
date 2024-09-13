@@ -24,7 +24,7 @@ Make components, using the Declarative Shadow DOM approach.
 
 `picture` element for displaying images in different formats and resolutions.
 
-```
+```html
   <picture>
     <source srcset="/images/<%= data.hero_image %>-1200w.webp 1200w,
                     /images/<%= data.hero_image %>-1920w.webp 1920w,
@@ -40,7 +40,7 @@ Make components, using the Declarative Shadow DOM approach.
 
 `image-set()` for background images in different resolutions.
 
-```
+```css
   /* https://www.debugbear.com/blog/responsive-images#css-syntax-for-responsive-background-images */
   /* Fallback */
   background-image: var(--hero-gradient-2), url("/images/hero/<%= data.image %>-2400w.jpg");

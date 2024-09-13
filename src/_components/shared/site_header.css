@@ -1,5 +1,10 @@
 body > header > br-container {
-  --padding-block: var(--size-fluid-2);
+  /* --padding-block: var(--size-fluid-2); */
+  --padding-block: 0;
+}
+
+body > header[role="banner"] {
+  box-shadow: var(--shadow-3);
 }
 
 
@@ -43,6 +48,7 @@ site-header > nav ul {
   display: flex;
   flex-direction: var(--flex-direction, column);
   gap: var(--gutter);
+  align-items: center;
 }
 
 site-header > nav a:hover {

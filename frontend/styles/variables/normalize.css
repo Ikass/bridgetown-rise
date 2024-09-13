@@ -3,7 +3,7 @@
 *, ::before, ::after { box-sizing: border-box; }
 
 :where(:not(dialog)) {
-  margin: 0;
+  /* margin: 0; */
 }
 
 :where(:not(fieldset, progress, meter)) {
@@ -63,16 +63,16 @@
   /* max-inline-size: var(--size-header-2); */
 }
 
-:where(h3) { font-size: var(--font-size-5) }
-:where(h4) { font-size: var(--font-size-4) }
-:where(h5) { font-size: var(--font-size-3) }
+/* :where(h3) { font-size: var(--font-size-5) } */
+:where(h4, h5) { font-size: var(--font-size-1) }
+/* :where(h5) { font-size: var(--font-size-1) } */
 
 :where(h3, h4, h5, h6, dt) {
   /* max-inline-size: var(--size-header-3); */
 }
 
 :where(p, ul, ol, dl, h6) {
-  font-size: var(--font-size-2);
+  /* font-size: var(--font-size-2); */
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -166,7 +166,7 @@ ol[role='list'] {
 :where(pre) {
   white-space: pre;
   min-inline-size: 0;
-  max-inline-size: max-content;
+  /* max-inline-size: max-content; */
   writing-mode: lr;
   direction: ltr;
 }
