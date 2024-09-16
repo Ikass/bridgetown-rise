@@ -9,7 +9,7 @@ br-container {
   margin-inline: auto;
   padding-inline: var(--gutter);
   padding-block: var(--padding-block, 1.5rem);
-  max-inline-size: var(--container-max-width, 90rem);
+  max-inline-size: var(--container-max-width, 85rem);
 }
 
 br-container > header > hgroup {
@@ -40,7 +40,7 @@ br-grid {
                         repeat(var(--grid-placement, auto-fit),
                         minmax(var(--grid-min-item-size, 20rem), 1fr)));
   gap: var(--gutter);
-  max-inline-size: var(--grid-max-width, 90rem);
+  max-inline-size: var(--grid-max-width, 85rem);
   align-items: var(--grid-alignment, start);
   margin-inline: auto;
   background-color: var(--grid-bg-color);
