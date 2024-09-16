@@ -14,9 +14,10 @@
   --tracking: -0.05ch;
   --tracking-s: -0.075ch;
 
-  --color-primary: var(--stone-6);
-  --color-dark: var(--stone-10);
-  --color-light: var(--stone-0);
+  --color-primary: var(--sand-6);
+  --color-dark: var(--sand-10);
+  --color-light: var(--sand-0);
+  --color-bg-darker: var(--sand-1);
 
 }
 

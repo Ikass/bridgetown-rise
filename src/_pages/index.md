@@ -6,6 +6,8 @@ image: bridge
 image_alt: Bridge
 hero_image: san-francisco-bridge
 hero_image_alt: "San Francisco bridge"
+hero_description: >-
+  An opiniated Bridgetown starter template kit, with progressive enhancement, CSS layout, fluid type & spacing, as well as modern CSS features.
 ---
 
 ## Bridgetown starter
