@@ -37,22 +37,59 @@ paginate:
 <!-- <nav role="navigation" aria-label="Pagination Navigation"> -->
 <br-container id="pagination">
   <ul class="pagination">
+    <!-- Display the previous page link -->
     <% if paginator.previous_page %>
     <li class="pagination-left">
       <a href="<%= paginator.previous_page_path %>">
-        <button class="outline">Previous Page</button>
+        <button class="outline">Previous </button>
+      </a>
+    </li>
+    <% else %>
+    <li class="pagination-left">
+      <button class="outline" disabled>Previous</button>
+    </li>
+    <% end %>
+    <!-- Display the previous page number -->
+    <% if paginator.previous_page %>
+    <li>
+      <a href="<%= paginator.previous_page_path %>">
+        <button class="outline"><%= paginator.previous_page %></button>
+      </a>
+    </li>
+    <% end %>
+    <!-- Display the current page number -->
+    <li>
+      <button class="outline" disabled>
+        <%= paginator.page %> 
+      </button>
+    </li>
+    <!-- Display the next page number -->
+    <% if paginator.next_page %>
+    <li>
+      <a href="<%= paginator.next_page_path %>">
+        <button class="outline"><%= paginator.next_page %></button>
       </a>
     </li>
     <% end %>
     <% if paginator.next_page %>
     <li class="pagination-right">
       <a href="<%= paginator.next_page_path %>">
-        <button class="outline">Next Page</button>
+        <button class="outline">Next</button>
       </a>
     </li>
+    <% else %>
+    <li class="pagination-right">
+      <button class="outline" disabled>Next</button>
+    </li>    
     <% end %>
   </ul>
 
 <!-- </nav> -->
 </br-container>
 <% end %>
+
+<style>
+#pagination button {
+  font-size: var(--font-size-fluid-0);
+}
+</style>

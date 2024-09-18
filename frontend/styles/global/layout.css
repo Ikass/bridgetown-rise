@@ -71,7 +71,7 @@ ul.pagination {
   grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
   grid-template-areas: "left right"; */
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: var(--size-fluid-2);
   padding: 0;
   margin: 0;
