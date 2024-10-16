@@ -104,12 +104,14 @@ article {
   display: flex;
   flex-direction: column;
   align-self: stretch;
+  gap: var(--gutter);
   box-shadow: var(--shadow-4);
   padding: var(--gutter);
+  background-color: var(--color-light);
 }
 
 section-label {
-  font-size: var(--font-size-0);
+  font-size: var(--font-size-fluid-0);
   text-transform: uppercase;
   font-weight: var(--font-weight-7);
   color: var(--stone-7);
