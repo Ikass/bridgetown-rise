@@ -6,14 +6,16 @@
 
   <body class="<%= data.layout %> <%= data.page_class %>">
     <%# render "site_head", metadata: site.metadata %>
-    <%= render Shared::SiteHeader.new(metadata: site.metadata, resource: resource) %>
+    <%# render Shared::SiteHeader.new(metadata: site.metadata, resource: resource) %>
+    <%= render Shared::NewMenu.new(metadata: site.metadata, resource: resource) %>
+
 
     <main id="main" class="">
       <%= yield %>
     </main>
 
     <%# render "footer", metadata: site.metadata %>
-    <%= render Shared::SiteFooter.new(metadata: site.metadata, resource: resource) %>
+    <%# render Shared::SiteFooter.new(metadata: site.metadata, resource: resource) %>
   </body>
 
 </html>

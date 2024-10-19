@@ -1,0 +1,25 @@
+<header role="banner">
+  <br-container>
+      <a href="/" id="logo">
+        <%= site.metadata.title %>
+      </a>
+
+      <nav id="mainnav" class="main-nav" aria-label="Main">
+          <ul role="list">
+              <% site.data.nav.each do |item| %>
+                  <li><%= link_to item.title, item.url %></li>
+              <% end %>
+          </ul>
+      </nav>
+
+  </br-container>
+</header>
+
+
+<template id="burger-template">
+  <button type="button" aria-expanded="false" aria-label="Menu" aria-controls="mainnav">
+    <svg width="24" height="24" aria-hidden="true">
+      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z">
+    </svg>
+  </button>
+</template>
