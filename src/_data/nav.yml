@@ -3,6 +3,11 @@
 - title: Posts
   url: /posts/
 - title: Products
-  url: /products/
+  button: true
+  links:
+  - title: Product 1
+    url: /products/product-1
+  - title: Product 1
+    url: /products/product-1
 - title: About
   url: /about/

@@ -1,0 +1,113 @@
+header {
+  font-family: Arial;
+}
+
+.mobile-menu-button {
+  display: block;
+}
+
+@media (min-width: 48em) {
+  .mobile-menu-button {
+    display: none;
+  }
+}
+
+nav {
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+nav:not(.hidden-mobile) {
+  opacity: 1;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav ul>li {
+  margin-left: 0;
+}
+
+nav ul>li>button {
+  appearance: none;
+  background: none;
+  border: 0;
+}
+
+nav ul>li>button+ul {
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+nav ul>li>button[aria-expanded="true"]>svg {
+  transform: rotate(180deg);
+}
+
+nav ul>li>button[aria-expanded="false"]+ul {
+  opacity: 0;
+  height: 0;
+}
+
+nav>ul {
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+nav>ul>li {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 48em) {
+  nav>ul>li {
+    width: 100%;
+  }
+}
+
+nav>ul>li>a,
+nav>ul>li>button {
+  font-size: 1.25rem;
+}
+
+nav ul li a,
+nav ul li button {
+  display: inline-block;
+  padding: 0.25rem;
+  color: inherit;
+}
+
+nav ul li a[aria-current="page"],
+nav ul li button[aria-current="page"] {
+  color: blue;
+}
+
+nav ul li a[aria-current="true"],
+nav ul li button[aria-current="true"] {
+  background-color: lightgrey;
+}
+
+nav ul li a:hover,
+nav ul li button:hover,
+nav ul li a:focus-visible,
+nav ul li button:focus-visible {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+nav ul li a:not(:hover):not(:focus-visible) {
+  text-decoration: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media (max-width: 48em) {
+  .hidden-mobile {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+  }
+}

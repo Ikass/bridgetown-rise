@@ -1,0 +1,6 @@
+# bridgetown.config.yml
+
+collections:
+  products:
+    output: true
+    permalink: simple

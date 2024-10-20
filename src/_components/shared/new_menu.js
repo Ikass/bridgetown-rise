@@ -1,5 +1,5 @@
 const nav = document.querySelector('#mainnav')
-const list = nav.querySelector('ul');
+const list = nav.querySelector('#main-nav-ul');
 const burgerClone = document.querySelector('#burger-template').content.cloneNode(true);
 const button = burgerClone.querySelector('button');
 

@@ -1,0 +1,41 @@
+<header role="banner">
+  <br-container>
+      <a href="/" id="logo">
+        <%= site.metadata.title %>
+      </a>
+
+  <button class="mobile-menu-button hidden-desktop" aria-expanded="false" aria-controls="main-nav">Mobile menu</button>
+
+  <nav id="main-nav" class="hidden-mobile">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li>
+        <button class="expand-button" aria-expanded="false" aria-controls="products-level-2">
+          Products
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="12" height="9" viewBox="0 0 12 9">
+            <polygon points="1 0, 11 0, 6 8"></polygon>
+          </svg>
+        </button>
+        <ul id="products-level-2" class="hidden">
+          <li><a href="/products/product-1">Product 1</a></li>
+          <li><a href="/products/product-2">Product 2</a></li>
+          <li>
+            <button class="expand-button" aria-expanded="false" aria-controls="products-level-3">Rubies
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="12" height="9" viewBox="0 0 12 9">
+                <polygon points="1 0, 11 0, 6 8"></polygon>
+              </svg>
+            </button>
+            <ul id="products-level-3" class="hidden">
+              <li><a href="/products/big-ruby">Big Ruby</a></li>
+              <li><a href="/products/red-ruby">Red Ruby</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/about">About us</a></li>
+    </ul>
+  </nav>
+
+  </br-container>
+</header>
