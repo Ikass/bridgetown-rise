@@ -36,5 +36,5 @@ gem "puma", "< 7"
 # gem "nokolexbor", "~> 0.5"
 
 gem "bridgetown-seo-tag", "~> 6.0"
-gem "bridgetown-sitemap", "~> 2.0"
+gem "bridgetown-sitemap", "~> 3.0"
 gem "bridgetown-svg-inliner", "~> 2.0"
