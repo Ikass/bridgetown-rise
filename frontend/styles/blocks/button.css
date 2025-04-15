@@ -1,0 +1,42 @@
+.button {
+  --button-bg: var(--color-primary);
+  --button-text: var(--color-dark);
+  --button-x-padding: 2em;
+  --button-y-padding: 1.1em;
+  --button-gutter: 0.5ch;
+  --focus-color: var(--color-primary);
+
+  display: inline-flex;
+  gap: var(--button-gutter);
+  align-items: center;
+  line-height: var(--leading-flat);
+  position: relative;
+  border: none;
+  cursor: pointer;
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: var(--button-y-padding) var(--button-x-padding);
+  text-transform: uppercase;
+  letter-spacing: var(--uppercase-kerning);
+  text-decoration: none;
+  font-size: var(--size-step-00);
+  font-weight: var(--font-bold);
+}
+
+
+.button:hover {
+  filter: brightness(105%);
+}
+
+
+.button:active {
+  transform: scale(99%);
+}
+
+/* Variant exceptions */
+.button[data-button-variant='secondary'] {
+  --button-bg: var(--color-dark-glare);
+  --button-text: var(--color-primary);
+  --focus-color: var(--color-dark);
+  --corner-secondary-color: var(--color-primary);
+}

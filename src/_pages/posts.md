@@ -7,8 +7,7 @@ paginate:
   per_page: 6
 ---
 
-<br-container>
-  <br-grid>
+  <div class="grid">
     <% paginator.resources.each do |post| %>
       <article>     
         <header>
@@ -30,12 +29,10 @@ paginate:
         </footer>
       </article>
     <% end %>
-  </br-grid>
-</br-container>
+  </div>
 
 <% if paginator.total_pages > 1 %>
-<!-- <nav role="navigation" aria-label="Pagination Navigation"> -->
-<br-container id="pagination">
+<div class="container region" id="pagination">
   <ul class="pagination">
     <!-- Display the previous page link -->
     <% if paginator.previous_page %>
@@ -84,8 +81,7 @@ paginate:
     <% end %>
   </ul>
 
-<!-- </nav> -->
-</br-container>
+</div>
 <% end %>
 
 <style>

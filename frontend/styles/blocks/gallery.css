@@ -1,0 +1,21 @@
+.gallery {
+  --grid-placement: auto-fit;
+  --flow-space: var(--space-m);
+}
+
+.gallery p {
+  margin: 0;
+}
+
+.gallery img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+}
+
+.gallery__byline {
+  font-size: var(--size-step-00);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--uppercase-kerning);
+}

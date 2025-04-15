@@ -1,92 +1,367 @@
-/* Global variables */
+/* 
+  Global styles 
 
-:root {
-  --border-radius: 0.5rem;
-
-  --gutter: var(--size-fluid-2);
-  --padding-inline: var(--size-fluid-2);
-  /* --padding-block: var(--size-fluid-5); */
-
-  --transition-base: 250ms ease;
-  --transition-movement: 200ms linear;
-  --transition-fade: 200ms ease;
-  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
-  --tracking: -0.05ch;
-  --tracking-s: -0.075ch;
-
-  --color-primary: var(--sand-6);
-  --color-dark: var(--sand-10);
-  --color-light: var(--sand-0);
-  --color-bg-darker: var(--sand-1);
-
-}
-
-/* Global styles */
+  Low-specificity, global styles that apply to the whole 
+  project: https://cube.fyi/css.html
+*/
 
 body {
-  color: var(--color-dark);
-  background: var(--color-light);
-  font-size: var(--font-size-fluid-1);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: var(--color-light);
+  color: var(--color-dark);
+  font-size: var(--font-size-fluid-1);
+  font-family: var(--font-sans);
+  line-height: var(--leading-standard);
+  font-size-adjust: from-font;
+  margin: 0;
 }
 
-/* make the footer 'sticky' */
+/* to make the footer 'sticky' */
 main {
   flex-grow: 1;
 }
 
-nav ul {
-  list-style: none;
+:is(h1, h2, h3, h4) {
+  line-height: var(--leading-fine);
+  text-wrap: balance;
 }
 
-section {
-  padding-block: 1.5rem;
+h1 {
+  font-size: var(--font-size-fluid-3);
+  /* max-width: 20ch; */
 }
 
-svg {
-  block-size: 2ex;
-  inline-size: auto;
-  flex: none;
+h2 {
+  font-size: var(--font-size-fluid-2);
+  /* max-width: 35ch; */
 }
 
-[role="list"] {
+h3 {
+  font-size: var(--font-size-fluid-1);
+  /* max-width: 35ch; */
+}
+
+:is(h1, h2, h3, h4):where([class*='text-step-10'],
+  [class*='text-step-11'],
+  [class*='text-step-12']) {
+  line-height: var(--leading-micro);
+  font-weight: var(--font-black);
+}
+
+small {
+  font-size: var(--size-step-0);
+}
+
+ins {
+  text-decoration: none;
+  background: var(--color-primary);
+  color: var(--color-dark);
+  padding-inline: 0.3em;
+}
+
+:is(code, kbd, samp) {
+  font-family: var(--font-mono);
+  padding: 0.2em 0.2em 0.05em 0.2em;
+  hyphens: none;
+  tab-size: 2;
+  text-align: left;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  box-decoration-break: clone;
+}
+
+/* This is quite a new property, so we want code styles to at least, not be huge or tiny */
+@supports not (font-size-adjust: from-font) {
+  :is(code, kbd, samp) {
+    font-size: 0.8em;
+  }
+}
+
+pre:has(code) {
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+pre code {
+  border: none;
+  background: none;
   padding: 0;
 }
 
-/* Base interactive elements */
-
-a {
-  color: currentcolor;
+kbd {
+  border: 1px solid;
+  padding-block-end: 0.1em;
 }
 
-a:hover {
-  text-decoration: underline solid var(--color-primary) 2px;
-  text-underline-offset: 0.25em;
-  transition: var(--transition-fade);
+var {
+  font-style: normal;
+  font-weight: var(--font-medium);
+}
+
+q {
+  font-style: italic;
+}
+
+ul:not([class]) {
+  padding-inline-start: 1.7ch;
+  list-style-type: disc;
+}
+
+ul:not([class])>li {
+  padding-inline-start: var(--space-xs);
+}
+
+:is(ol, ul):not([class]) li+* {
+  margin-block-start: var(--flow-space, var(--space-xs));
+}
+
+ul ::marker {
+  font-size: 0.8lh;
+}
+
+ol ::marker {
+  font-size: 1em;
+  font-weight: var(--font-bold);
+}
+
+/* Lists with classes and roles will be out of standard flow, so remove the default spacing */
+[role='list'][class],
+[role='tablist'][class] {
+  margin-block: 0;
+  padding: 0;
+}
+
+dt {
+  font-weight: var(--font-medium);
+}
+
+dt+dd {
+  margin-block-start: var(--space-xs);
+}
+
+dd+dt {
+  margin-block-start: var(--space-s);
+}
+
+dd {
+  margin-inline-start: 1.5ch;
+}
+
+blockquote {
+  margin-inline: 0;
+  color: var(--color-light);
+}
+
+blockquote footer {
+  margin-block-start: var(--space-s);
+  color: var(--color-primary);
+  font-size: var(--size-step-0);
+}
+
+blockquote q {
+  font-style: normal;
+}
+
+:is(video, iframe[src*='youtube'], iframe[src*='vimeo']) {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+figcaption {
+  padding-block-start: 0.5em;
+  font-size: var(--size-step-0);
+  font-family: monospace;
+}
+
+table {
+  border: var(--stroke);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: var(--font-bold);
+  line-height: var(--leading-fine);
+}
+
+thead th {
+  padding-block: var(--space-s);
+}
+
+td,
+th {
+  padding: var(--space-xs) var(--space-s);
+}
+
+th:not(:only-of-type) {
+  border-block-end: var(--stroke);
+}
+
+th:only-of-type {
+  border-inline-end: var(--stroke);
+}
+
+:is(th, td)~ :is(th, td) {
+  border-inline-start: var(--stroke);
+}
+
+tr+tr :is(th, td) {
+  border-block-start: var(--stroke);
+}
+
+caption {
+  caption-side: bottom;
+  margin-block-start: var(--space-s);
+}
+
+a:not([class]):hover {
+  text-underline-offset: 0.2lh;
+}
+
+:is(h1, h2, h3, h4) a:not([class]) {
+  text-decoration-thickness: 0.1ex;
+  text-underline-offset: 0.2ex;
+}
+
+:is(h1, h2, h3, h4) a:not([class]):hover {
+  text-underline-offset: 0.3ex;
 }
 
 :focus {
-  outline: 3px solid;
-  outline-offset: 0.3ch;
-}
-
-:target {
-  scroll-margin-top: 2ex;
-}
-
-main:focus {
   outline: none;
 }
 
+:focus-visible {
+  outline: 2px solid var(--focus-color, currentColor);
+  outline-offset: var(--focus-offset, 0.2lh);
+}
 
-/* Base selection styles that invert whatever colours are rendered */
-/* ::selection {
-  background: var(--color-primary);
+/* Firefox is the only browser that doesn't outline the whole element unless you make it display: inline-block. That in itself causes multiple flow issues so we can detect it, using its own vendor prefix and reduce focus offset
+*/
+@supports (-moz-appearance: none) {
+  :root {
+    --focus-offset: 0.08em;
+  }
+}
+
+:target {
+  scroll-margin-block: 5lh;
+}
+
+::selection {
+  color: var(--color-dark);
+  background: var(--color-light);
+}
+
+hr {
+  border: none;
+  border-block-start: var(--hr-stroke, var(--stroke));
+  margin-block: var(--flow-space, var(--space-xl));
+}
+
+svg:not([class]) {
+  width: auto;
+  height: 1lh;
+}
+
+svg {
+  flex-shrink: 0;
+}
+
+svg[role='img'][width][height] {
+  width: revert;
+  height: revert;
+  background: var(--color-light);
+  padding: var(--space-xs);
+}
+
+/* There's a .flow composition, but this prevents forms from having to have that applied where markup is harder to control in certain systems. It still uses the --flow-space variables though to make managing space easier */
+form>*+* {
+  margin-top: var(--flow-space, 1rem);
+}
+
+:is(input, select, textarea) {
+  accent-color: var(--color-primary);
+}
+
+:is(input:not([type='checkbox'], [type='radio'], [type='color']), select, textarea) {
+  padding: 0.5em 0.8em;
+  border-radius: var(--radius-s);
+  border: var(--stroke-solid);
+  background: var(--color-dark-glare);
   color: var(--color-light);
-} */
+  width: 100%;
 
-.preload-transitions * {
-  transition: none !important;
+  &::placeholder {
+    color: var(--color-mid);
+    opacity: 1;
+  }
+}
+
+label {
+  line-height: var(--leading-fine);
+  font-weight: var(--font-medium);
+}
+
+label::after {
+  content: '\A';
+  white-space: pre;
+}
+
+/* Usually label wraps checkbox and radio buttons, so we give ourselves more layout and text-flow control with flex */
+label:has(input) {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-s);
+  font-weight: var(--font-normal);
+}
+
+label:has(input)+label:has(input) {
+  --flow-space: var(--space-s-m);
+}
+
+/* Slightly adjusts the vertical position of the check/radio */
+label:has(input) input {
+  transform: translateY(-0.1ex);
+}
+
+input:disabled {
+  background: var(--color-mid);
+}
+
+input:disabled,
+label input:disabled+* {
+  cursor: not-allowed;
+}
+
+fieldset {
+  border: var(--stroke);
+  padding: var(--space-s);
+}
+
+legend {
+  font-weight: var(--font-medium);
+  padding-inline: var(--space-xs);
+}
+
+summary {
+  font-weight: var(--font-bold);
+  cursor: pointer;
+}
+
+details[open] summary {
+  margin-block-end: var(--space-s);
 }

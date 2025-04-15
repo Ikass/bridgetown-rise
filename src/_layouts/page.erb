@@ -2,10 +2,12 @@
 layout: default
 ---
 
-<section class="container">
+<section class="region">
+  <div class="container flow">
     <hgroup>
       <h1><%= data.title %></h1>
       <p><%= data.subtitle %></p>
     </hgroup>
     <%= yield %>
+  </div>
 </section>

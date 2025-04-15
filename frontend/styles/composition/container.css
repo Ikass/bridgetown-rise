@@ -1,0 +1,10 @@
+/*
+WRAPPER COMPOSITION 
+A common wrapper/container
+*/
+.container {
+  margin-inline: auto;
+  max-width: var(--container-max-width, 85rem);
+  padding-inline: var(--gutter);
+  position: relative;
+}

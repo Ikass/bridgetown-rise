@@ -1,0 +1,34 @@
+.site-head {
+  text-transform: uppercase;
+  letter-spacing: var(--uppercase-kerning);
+  line-height: var(--leading-flat);
+  font-size: var(--size-step-00);
+  font-weight: var(--font-bold);
+  padding-block-start: var(--space-m);
+}
+
+.site-head .repel {
+  --gutter: var(--space-m);
+}
+
+.site-head__brand {
+  container-type: inline-size;
+  container-name: site-head-brand;
+  flex-basis: clamp(25ch, 60%, 50rem);
+  flex-grow: 1;
+}
+
+.site-head__brand a:not(:hover) {
+  text-decoration: none;
+}
+
+.site-head hr {
+  --flow-space: var(--space-m);
+  --hr-stroke: var(--stroke-width) solid var(--color-primary);
+}
+
+@container site-head-brand (68vi <=width <=50rem) {
+  .site-head__brand a {
+    color: var(--color-light);
+  }
+}

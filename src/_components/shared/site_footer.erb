@@ -1,7 +1,7 @@
-<footer data-theme="dark" class="">
-<br-container>
+<footer data-theme="dark" class="region">
+<div class="container">
 
-  <br-grid>
+  <div class="grid">
   
     <div class="flow">
       <p><b>Bridgetown Rise</b></p>
@@ -10,8 +10,6 @@
       </p>
     </div>
 
-
-    <%# TODO: Fix the left margin conflict with PicoCSS %>
     <nav>
       <p><b>Quick Links</b></p>
       <ul role="list">
@@ -30,7 +28,7 @@
         <%# TODO: refactor into a flex container %>
         <% site.data.social_icons.each do |item| %>
           <a href="<%= item.url %>" class="flex">
-            <span class="sr-only"><%= item.title %></span>
+            <span class="visually-hidden"><%= item.title %></span>
             <% svg_file = item.icon %>
             <%= svg "/images/svg/" + svg_file + ".svg" %>
           </a>
@@ -40,8 +38,8 @@
     </div>
 
     
-  </br-grid>
-</br-container>
+  </div>
+</div>
 
   <footer>
       <p>&copy; <%= site.time.strftime("%Y") %> Developed by 

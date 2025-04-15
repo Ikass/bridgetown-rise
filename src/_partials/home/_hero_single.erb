@@ -1,22 +1,20 @@
 <%# TODO: refactor into a component with multiple versions %>
 <section id="hero" class="flow" data-layout="hero-single">
-    <br-container>
+    <div class="container">
         <hgroup>
             <h1><%= data.title %></h1>
             <p><%= data.subtitle %></p>
         </hgroup>
-    </br-container>
+    </div>
 </section>
 
 <section id="hero" data-layout="hero-split">
-    <br-container>
-        <br-grid data-layout="50-50">
-            <br-grid-item>
-                <hgroup>
-                    <h1><%= data.title %></h1>
-                    <p><%= data.subtitle %></p>
-                </hgroup>
-            </br-grid-item>
+    <div class="container">
+        <div class="grid" data-layout="50-50">
+            <hgroup>
+                <h1><%= data.title %></h1>
+                <p><%= data.subtitle %></p>
+            </hgroup>
 
             <picture>
                 <source srcset="/images/<%= data.hero_image %>-600w.webp 600w,
@@ -30,8 +28,8 @@
                 <img src="images/<%= data.hero_image %>-1200w.jpg" width="1200" height="806" loading="lazy">
             </picture>
 
-        </br-grid>
-    </br-container>
+        </div>
+    </div>
 </section>
 
 <style>

@@ -1,0 +1,10 @@
+.site-foot {
+  background: var(--color-dark-glare);
+  color: var(--color-light);
+  line-height: var(--leading-flat);
+  padding-block: var(--space-m);
+}
+
+.site-foot .wrapper * {
+  margin: 0;
+}

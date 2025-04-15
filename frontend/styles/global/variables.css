@@ -1,0 +1,21 @@
+
+:root {
+  --gutter: var(--size-fluid-2);
+  --transition-base: 250ms ease;
+  --transition-movement: 200ms linear;
+  --transition-fade: 300ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+  --stroke-width: 1px;
+  --stroke: var(--stroke-width) dashed var(--color-mid);
+  --stroke-solid: var(--stroke-width) solid var(--color-mid);
+  --radius-s: 0.2rem;
+  --radius-m: 0.75rem;
+  --radius-l: 2.5rem;
+  --uppercase-kerning: 0.04ch;
+  --indent-size: var(--space-xs-l);
+
+  --color-primary: var(--orange-6);
+  --color-dark: var(--stone-10);
+  --color-light: var(--stone-2);
+
+}

@@ -1,0 +1,67 @@
+.card {
+  --focus-color: var(--color-primary);
+
+  border: var(--stroke);
+  border-radius: var(--radius-l);
+  padding: var(--space-l);
+  position: relative;
+}
+
+.card__heading {
+  font-size: var(--size-step-00);
+  text-transform: uppercase;
+  letter-spacing: var(--uppercase-kerning);
+  color: var(--color-light);
+}
+
+.card__meta {
+  --flow-space: var(--space-s);
+
+  font-size: var(--size-step-2);
+  line-height: var(--leading-flat);
+}
+
+.card__content {
+  margin-block-start: var(--space-l);
+}
+
+.card__alert {
+  /* This element is in a flow context so we need to remove the inherited margin */
+  --flow-space: 0;
+
+  display: grid;
+  place-items: center;
+  width: 10em;
+  height: 10em;
+  background: var(--color-light);
+  color: var(--color-dark);
+  text-transform: uppercase;
+  letter-spacing: var(--uppercase-kerning);
+  font-size: var(--size-step-000);
+  font-weight: bold;
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  z-index: 1;
+  top: calc(var(--stroke-width, 1px) * -1);
+  right: calc(var(--stroke-width, 1px) * -1);
+}
+
+.card__alert > span {
+  transform: rotate(45deg) translateY(-1lh);
+  line-height: var(--leading-flat);
+}
+
+.card img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+}
+
+.card .button {
+  --flow-space: var(--space-l);
+}
+
+.card:has([href]:hover) {
+  background: rgb(from var(--color-light) r g b / 5%);
+  transition: background var(--transition-fade);
+}

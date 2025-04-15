@@ -1,8 +1,5 @@
-/* Define CSS Layers */
-@layer global, blocks, utilities;
-
-@import "variables/_all.css" layer(global);
-@import "global/_all.css" layer(global);
-@import "utilities/_all.css" layer(utilities);
-
-@import "vendor/_all.css" layer(global);
+@import "global/_all.css";
+@import "variables/_all.css";
+@import "composition/_all.css";
+@import "blocks/_all.css";
+@import "utilities/_all.css";

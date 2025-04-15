@@ -1,5 +1,6 @@
 /* @import 'fonts.css'; */
+@import 'reset.css';
+@import 'variables.css';
 @import "global-styles.css";
 @import 'layout.css';
-@import 'code.css';
-/* @import 'reset.css'; */
+/* @import 'code.css'; */
