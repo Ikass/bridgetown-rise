@@ -24,12 +24,12 @@ main {
 }
 
 :is(h1, h2, h3, h4) {
-  line-height: var(--leading-fine);
+  line-height: var(--font-lineheight-0);
   text-wrap: balance;
 }
 
 h1 {
-  font-size: var(--font-size-fluid-3);
+  font-size: var(--font-size-fluid-4);
   /* max-width: 20ch; */
 }
 
@@ -46,12 +46,12 @@ h3 {
 :is(h1, h2, h3, h4):where([class*='text-step-10'],
   [class*='text-step-11'],
   [class*='text-step-12']) {
-  line-height: var(--leading-micro);
+  line-height: var(--font-lineheight-0);
   font-weight: var(--font-black);
 }
 
 small {
-  font-size: var(--size-step-0);
+  font-size: var(--font-size-fluid-0);
 }
 
 ins {

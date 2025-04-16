@@ -12,14 +12,13 @@ body > header[role="banner"] {
 /* *********************** */
 /* wrapper for site header */
 /* *********************** */
-site-header {
+.site-head {
   display: grid;
   grid-template-columns: max-content 1fr;
-  /* max-inline-size: var(--wrapper-max-width, 85rem); */
   margin-inline: auto;
 }
 
-site-header #logo {
+.site-head #logo {
   font-weight: bold;
   text-transform: uppercase;
   display: flex;
@@ -28,42 +27,43 @@ site-header #logo {
   padding: var(--space-xs) 0;
 }
 
-site-header #logo:hover {
+.site-head #logo:hover {
   text-decoration: none;
 }
 
-site-header a {
+.site-head a {
   text-decoration: none;
 }
 
 
 /* '#main-nav' */
-site-header > nav {
+.site-head > nav {
   display: var(--display, none);
   grid-column: 1 / span 2;
   justify-self: var(--justify, center);
 }
 
-site-header > nav ul {
+.site-head > #main-nav > ul {
+  list-style: none;
   display: flex;
   flex-direction: var(--flex-direction, column);
   gap: var(--gutter);
   align-items: center;
 }
 
-site-header > nav a:hover {
+.site-head > nav a:hover {
     text-decoration: underline solid var(--color-primary) 2px;
     text-underline-offset: 0.25em;
 }
 
 @media (width >=35em) {
-  site-header>nav {
+  .site-head>nav {
     --justify: end;
     --display: flex;
     grid-column: 2;
   }
 
-  site-header>nav ul {
+  .site-head>nav ul {
     --flex-direction: row;
   }
 

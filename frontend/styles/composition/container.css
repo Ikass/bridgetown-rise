@@ -8,3 +8,7 @@ A common wrapper/container
   padding-inline: var(--gutter);
   position: relative;
 }
+
+.container[data-layout="full-bleed"] {
+  max-width: 100%;
+}

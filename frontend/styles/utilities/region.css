@@ -3,6 +3,6 @@ REGION UTILITY
 Consistent block padding for page sections
 */
 .region {
-  padding-block: var(--region-space, var(--size-fluid-4));
+  padding-block: var(--region-space, var(--size-fluid-6));
   position: relative;
 }
