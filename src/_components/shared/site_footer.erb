@@ -4,15 +4,15 @@
   <div class="grid">
   
     <div class="flow">
-      <p><b>Bridgetown Rise</b></p>
+      <h2>Bridgetown Rise</h2>
       <p>
         A Bridgetown starter template using modern vanilla CSS, fluid type, fluid spacing, flexible layout and progressive enhancement and other goodies.
       </p>
     </div>
 
-    <nav>
-      <p><b>Quick Links</b></p>
-      <ul role="list">
+    <nav aria-label="Quick links" class="flow">
+      <h3>Quick Links</h3>
+      <ul class="footer-nav" role="list">
         <% site.data.nav.each do |item| %>
           <li>
             <%= link_to item.title, item.url %>
@@ -21,22 +21,20 @@
       </ul>
     </nav>
 
-    <div class="flow">
-      <p><b>Social Links</b></p>
-      <nav id="social" class="" aria-label="Social links">
-        
-        <%# TODO: refactor into a flex container %>
+    <nav id="social" class="flow" aria-label="Social links">
+      <h3>Social Links</h3>
+      <ul class="footer-nav" role="list">        
         <% site.data.social_icons.each do |item| %>
-          <a href="<%= item.url %>" class="flex">
+        <li>
+          <a href="<%= item.url %>">
             <span class="visually-hidden"><%= item.title %></span>
             <% svg_file = item.icon %>
             <%= svg "/images/svg/" + svg_file + ".svg" %>
           </a>
+        </li>
         <% end %>
-
-      </nav>
-    </div>
-
+      </ul>
+    </nav>
     
   </div>
 </div>

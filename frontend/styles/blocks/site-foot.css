@@ -1,6 +1,6 @@
 .site-foot {
-  background: var(--color-dark-glare);
-  color: var(--color-light);
+  background: var(--surface-2);
+  color: var(--text-1);
   line-height: var(--leading-flat);
   padding-block: var(--space-m);
 }

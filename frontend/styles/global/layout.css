@@ -104,12 +104,12 @@ article {
   gap: var(--gutter);
   box-shadow: var(--shadow-4);
   padding: var(--gutter);
-  background-color: var(--color-light);
+  background-color: var(--surface-2);
 }
 
 .section-label {
   font-size: var(--font-size-fluid-0);
   text-transform: uppercase;
   font-weight: var(--font-weight-7);
-  color: var(--color-primary);
+  color: var(--brand);
 }

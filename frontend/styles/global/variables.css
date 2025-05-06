@@ -14,8 +14,10 @@
   --uppercase-kerning: 0.04ch;
   --indent-size: var(--space-xs-l);
 
-  --color-primary: var(--orange-6);
+  --color-primary: var(--brand);
   --color-dark: var(--stone-10);
-  --color-light: var(--stone-2);
+  --color-light: var(--text-1);
 
+
+  
 }

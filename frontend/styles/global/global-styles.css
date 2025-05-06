@@ -9,8 +9,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: var(--color-light);
-  color: var(--color-dark);
+  background: var(--surface-1);
+  color: var(--text-1);
   font-size: var(--font-size-fluid-1);
   font-family: var(--font-sans);
   line-height: var(--leading-standard);
@@ -56,8 +56,8 @@ small {
 
 ins {
   text-decoration: none;
-  background: var(--color-primary);
-  color: var(--color-dark);
+  background: var(--brand);
+  color: var(--text-1);
   padding-inline: 0.3em;
 }
 
@@ -153,12 +153,12 @@ dd {
 
 blockquote {
   margin-inline: 0;
-  color: var(--color-light);
+  color: var(--text-1);
 }
 
 blockquote footer {
   margin-block-start: var(--space-s);
-  color: var(--color-primary);
+  color: var(--text-2);
   font-size: var(--size-step-0);
 }
 

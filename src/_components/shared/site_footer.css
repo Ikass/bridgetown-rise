@@ -3,9 +3,9 @@
 /* ************************ */
 
 body > footer {
-    background: var(--color-dark);
-    /* background-image: var(--gradient-23); */
-    color: var(--color-light);
+    --region-space: var(--size-fluid-4);
+    background: var(--surface-2);
+    color: var(--text-1);
     font-size: var(--font-size-fluid-0);
 }
 
@@ -13,14 +13,7 @@ body > footer nav > ul > li {
     padding: 0;
 }
 
-body > footer > .grid {
-    /* --background-color: var(--color-dark); */
-    background-image: var(--gradient-23);
-}
-
 body > footer .grid {
-    /* --grid-layout-columns: 2fr 1fr 1fr; */
-    --external-link: url("/images/svg/external-link-light.svg");
     padding: var(--gutter);
 }
 
@@ -29,31 +22,32 @@ body footer > footer {
     justify-content: center;
 }
 
-body > footer nav:not(#social) {
-    display: flex;
-    flex-direction: column;
-}
-
-body > footer nav > ul {
-    align-items: start; 
-    display: flex;
-    flex-direction: column;
-    margin-inline-start: 0;
-}
-
-body > footer .grid #social {
+/* Target the social links list specifically */
+body>footer nav#social ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
     gap: var(--size-fluid-1);
 }
 
-body > footer .grid nav#social > a {
-    color: var(--color-light);
-    color: #c2c7d0; /* Pico text color  */
+body > footer #social a {
+    color: var(--text-2);
 }
 
-body > footer .grid nav#social > a:hover {
-    color: var(--color-primary);
+body>footer #social a:hover {
+    color: var(--brand);
+}
+
+body > footer a:hover {
+    color: var(--brand);
+}
+
+/* Add proper spacing for flow content in navigation */
+body>footer nav.flow h3 {
+    margin-bottom: var(--space-s, 0.75rem);
+}
+
+/* Alternative if you want to use the flow utility more generally */
+body>footer .flow>*+* {
+    margin-top: var(--flow-space, 1rem);
 }
 
