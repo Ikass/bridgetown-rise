@@ -4,7 +4,7 @@
   Customizable max width, default of 90rem or 1440px.
 */
 
-br-container {
+.container {
   display: block;
   margin-inline: auto;
   padding-inline: var(--gutter);
@@ -33,20 +33,20 @@ br-container {
 
 /* GRID */
 
-br-grid {
+.grid {
   /* --grid-min-item-size: var(--size-fluid-9); */
   display: grid;
   grid-template-columns: var(--grid-layout-columns,
                         repeat(var(--grid-placement, auto-fit),
                         minmax(var(--grid-min-item-size, 20rem), 1fr)));
-  gap: var(--gutter);
+  gap: var(--grid-gutter, 1.5rem);
   max-inline-size: var(--grid-max-width, 85rem);
   align-items: var(--grid-alignment, start);
   margin-inline: auto;
   background-color: var(--grid-bg-color);
 }
 
-br-grid > :is(img, picture, video, figure) {
+.grid > :is(img, picture, video, figure) {
   justify-self: center;
 }
 
@@ -112,4 +112,8 @@ article {
   text-transform: uppercase;
   font-weight: var(--font-weight-7);
   color: var(--brand);
+}
+
+.home .grid {
+  --grid-gutter: var(--size-fluid-4);
 }

@@ -262,8 +262,8 @@ a:not([class]):hover {
 }
 
 ::selection {
-  color: var(--color-dark);
-  background: var(--color-light);
+  color: var(--text-1);
+  background: var(--brand);
 }
 
 hr {
@@ -289,7 +289,12 @@ svg[role='img'][width][height] {
 }
 
 /* There's a .flow composition, but this prevents forms from having to have that applied where markup is harder to control in certain systems. It still uses the --flow-space variables though to make managing space easier */
-form>*+* {
+form {
+  --flow-space: var(--size-fluid-1);
+}
+
+form>*+*,
+form > fieldset> *+* {
   margin-top: var(--flow-space, 1rem);
 }
 
@@ -301,7 +306,7 @@ form>*+* {
   padding: 0.5em 0.8em;
   border-radius: var(--radius-s);
   border: var(--stroke-solid);
-  background: var(--color-dark-glare);
+  background: var(--gray-2);
   color: var(--color-light);
   width: 100%;
 
@@ -325,12 +330,12 @@ label::after {
 label:has(input) {
   display: flex;
   align-items: baseline;
-  gap: var(--space-s);
+  gap: var(--size-fluid-1);
   font-weight: var(--font-normal);
 }
 
 label:has(input)+label:has(input) {
-  --flow-space: var(--space-s-m);
+  --flow-space: var(--size-fluid-1);
 }
 
 /* Slightly adjusts the vertical position of the check/radio */

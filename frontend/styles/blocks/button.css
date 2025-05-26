@@ -1,13 +1,13 @@
 button,
 .button {
-  --button-bg: var(--color-primary);
-  --button-text: var(--color-dark);
+  --button-bg: var(--surface-1);
+  --button-text: var(--text-1);
   --button-x-padding: 2em;
   --button-y-padding: 1.1em;
   --button-gutter: 0.5ch;
   --focus-color: var(--color-primary);
   --button-border-width: 2px;
-  --button-border-color: transparent;
+  --button-border-color: var(--text-2, transparent);
 
   display: inline-flex;
   gap: var(--button-gutter);
@@ -40,8 +40,8 @@ button:active,
 /* Variant exceptions */
 button[data-button-variant='secondary'],
 .button[data-button-variant='secondary'] {
-  --button-bg: var(--color-light);
-  --button-text: var(--color-dark);
-  --focus-color: var(--color-dark);
-  --button-border-color: var(--color-dark);
+  --button-bg: var(--surface-4);
+  --button-text: var(--text-1);
+  --focus-color: var(--surface-2);
+  --button-border-color: var(--text-2);
 }
