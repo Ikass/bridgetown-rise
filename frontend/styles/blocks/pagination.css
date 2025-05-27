@@ -9,7 +9,7 @@
 ul.pagination {
   display: flex;
   justify-content: center;
-  gap: var(--space-l);
+  gap: var(--space-s-m);
   padding: 0;
   margin: 0;
 }
