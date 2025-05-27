@@ -7,9 +7,9 @@ paginate:
   per_page: 6
 ---
 
-  <div class="grid">
+  <div class="grid" data-layout="thirds">
     <% paginator.resources.each do |post| %>
-      <article>     
+      <article class="card">     
         <header>
           <img
             slot="image"
@@ -17,11 +17,11 @@ paginate:
             alt="Placeholder image wth the text 'Hello Ruby'."
           />
         </header>
-        <article-body>
+        <div class="article-body">
           <h2><%= post.data.title %></h2>
           <%= post.data.description %>
           <small><%= date_to_string post.data.date, "ordinal" %></small>
-        </article-body>
+        </div>
         <footer>
           <a href="<%= post.relative_url %>" >
             <button>Read More</button>
@@ -38,25 +38,25 @@ paginate:
     <% if paginator.previous_page %>
     <li class="pagination-left">
       <a href="<%= paginator.previous_page_path %>">
-        <button class="outline">Previous </button>
+        <button data-variant="secondary">Previous</button>
       </a>
     </li>
     <% else %>
     <li class="pagination-left">
-      <button class="outline" disabled>Previous</button>
+      <button data-variant="secondary" disabled>Previous</button>
     </li>
     <% end %>
     <!-- Display the previous page number -->
     <% if paginator.previous_page %>
     <li>
       <a href="<%= paginator.previous_page_path %>">
-        <button class="outline"><%= paginator.previous_page %></button>
+        <button data-variant="secondary"><%= paginator.previous_page %></button>
       </a>
     </li>
     <% end %>
     <!-- Display the current page number -->
     <li>
-      <button class="outline" disabled>
+      <button data-variant="secondary" disabled>
         <%= paginator.page %> 
       </button>
     </li>
@@ -64,19 +64,19 @@ paginate:
     <% if paginator.next_page %>
     <li>
       <a href="<%= paginator.next_page_path %>">
-        <button class="outline"><%= paginator.next_page %></button>
+        <button data-variant="secondary"><%= paginator.next_page %></button>
       </a>
     </li>
     <% end %>
     <% if paginator.next_page %>
     <li class="pagination-right">
       <a href="<%= paginator.next_page_path %>">
-        <button class="outline">Next</button>
+        <button data-variant="secondary">Next</button>
       </a>
     </li>
     <% else %>
     <li class="pagination-right">
-      <button class="outline" disabled>Next</button>
+      <button data-variant="secondary" disabled>Next</button>
     </li>    
     <% end %>
   </ul>

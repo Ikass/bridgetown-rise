@@ -1,0 +1,30 @@
+/* PAGINATION */
+
+#pagination {
+  --flow-space: var(--space-l);
+  padding-block: 0;
+}
+
+
+ul.pagination {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-l);
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination>li {
+  list-style: none;
+  margin: 0;
+}
+
+ul.pagination>li.pagination-left {
+  grid-area: left;
+  justify-self: right;
+}
+
+ul.pagination>li.pagination-right {
+  grid-area: right;
+  justify-self: left;
+}

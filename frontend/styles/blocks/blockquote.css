@@ -1,0 +1,97 @@
+/* 
+  Blockquote Styling
+  
+  Elegant, understated styling that enhances readability
+  without overwhelming the content.
+*/
+
+blockquote {
+  margin-inline: 0;
+  margin-block: var(--space-m);
+  padding-inline-start: var(--space-m);
+  padding-inline-end: var(--space-s);
+  padding-block: var(--space-xs);
+  color: var(--text-1);
+  font-style: italic;
+  font-size: var(--step-1);
+  line-height: var(--leading-loose, 1.6);
+  border-inline-start: 4px solid var(--brand);
+  background: linear-gradient(90deg,
+      hsl(var(--brand-hue, 220) 20% 95% / 0.3) 0%,
+      transparent 100%);
+  border-radius: 0 var(--radius-s) var(--radius-s) 0;
+  position: relative;
+}
+
+/* Dark theme adjustments */
+:where([data-theme="dark"], [data-theme="dim"]) blockquote {
+  background: linear-gradient(90deg,
+      hsl(var(--brand-hue, 220) 20% 15% / 0.4) 0%,
+      transparent 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root blockquote {
+    background: linear-gradient(90deg,
+        hsl(var(--brand-hue, 220) 20% 15% / 0.4) 0%,
+        transparent 100%);
+  }
+}
+
+/* Footer/citation styling */
+blockquote footer {
+  margin-block-start: var(--space-s);
+  color: var(--text-2);
+  font-size: var(--step-0);
+  font-style: normal;
+  font-weight: var(--font-medium);
+}
+
+blockquote footer::before {
+  content: "— ";
+  color: var(--brand);
+}
+
+/* Remove italic from nested quotes */
+blockquote q {
+  font-style: normal;
+}
+
+/* Nested blockquotes */
+blockquote blockquote {
+  margin-block: var(--space-s);
+  border-inline-start-width: 2px;
+  padding-inline-start: var(--space-s);
+  font-size: var(--step-0);
+  background: none;
+}
+
+/* Pull quotes - special variant */
+blockquote[data-style="pull-quote"] {
+  text-align: center;
+  border-inline-start: none;
+  border-block: 2px solid var(--brand);
+  padding-block: var(--space-m);
+  background: var(--surface-2);
+  font-size: var(--step-2);
+  font-weight: var(--font-medium);
+  quotes: "" " " "" "'" "'";
+}
+
+blockquote[data-style="pull-quote"]::before {
+  content: open-quote;
+  color: var(--brand);
+  font-size: var(--step-4);
+  line-height: 0;
+  margin-inline-end: 0.1em;
+  vertical-align: -0.2em;
+}
+
+blockquote[data-style="pull-quote"]::after {
+  content: close-quote;
+  color: var(--brand);
+  font-size: var(--step-4);
+  line-height: 0;
+  margin-inline-start: 0.1em;
+  vertical-align: -0.2em;
+}

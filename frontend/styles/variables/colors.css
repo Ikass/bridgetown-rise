@@ -33,23 +33,21 @@
     --gray-10: #16191d;
     --gray-11: #0d0f12;
     --gray-12: #030507;
-
-    /* Red */    
-    --red-0: #fff5f5;
-    --red-1: #ffe3e3;
-    --red-2: #ffc9c9;
-    --red-3: #ffa8a8;
-    --red-4: #ff8787;
-    --red-5: #ff6b6b;
-    --red-6: #fa5252;
-    --red-7: #f03e3e;
-    --red-8: #e03131;
-    --red-9: #c92a2a;
-    --red-10: #b02525;
-    --red-11: #962020;
-    --red-12: #7d1a1a;
-    
-  
+   
+    /* Indigo */
+    --indigo-0: #edf2ff;
+    --indigo-1: #dbe4ff;
+    --indigo-2: #bac8ff;
+    --indigo-3: #91a7ff;
+    --indigo-4: #748ffc;
+    --indigo-5: #5c7cfa;
+    --indigo-6: #4c6ef5;
+    --indigo-7: #4263eb;
+    --indigo-8: #3b5bdb;
+    --indigo-9: #364fc7;
+    --indigo-10: #2f44ad;
+    --indigo-11: #283a94;
+    --indigo-12: #21307a;
 
     /* Blue */
     --blue-0: #e7f5ff;
@@ -65,51 +63,5 @@
     --blue-10: #145591;
     --blue-11: #114678;
     --blue-12: #0d375e;
-
-
-    /* Green */
-    --green-0: #ebfbee;
-    --green-1: #d3f9d8;
-    --green-2: #b2f2bb;
-    --green-3: #8ce99a;
-    --green-4: #69db7c;
-    --green-5: #51cf66;
-    --green-6: #40c057;
-    --green-7: #37b24d;
-    --green-8: #2f9e44;
-    --green-9: #2b8a3e;
-    --green-10: #237032;
-    --green-11: #1b5727;
-    --green-12: #133d1b;
-
-    /* Yellow */
-    --yellow-0: #fff9db;
-    --yellow-1: #fff3bf;
-    --yellow-2: #ffec99;
-    --yellow-3: #ffe066;
-    --yellow-4: #ffd43b;
-    --yellow-5: #fcc419;
-    --yellow-6: #fab005;
-    --yellow-7: #f59f00;
-    --yellow-8: #f08c00;
-    --yellow-9: #e67700;
-    --yellow-10: #b35c00;
-    --yellow-11: #804200;
-    --yellow-12: #663500;
-
-    /* Orange */
-    --orange-0: #fff4e6;
-    --orange-1: #ffe8cc;
-    --orange-2: #ffd8a8;
-    --orange-3: #ffc078;
-    --orange-4: #ffa94d;
-    --orange-5: #ff922b;
-    --orange-6: #fd7e14;
-    --orange-7: #f76707;
-    --orange-8: #e8590c;
-    --orange-9: #d9480f;
-    --orange-10: #bf400d;
-    --orange-11: #99330b;
-    --orange-12: #802b09;
 
 }

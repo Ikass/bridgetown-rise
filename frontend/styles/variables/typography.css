@@ -16,17 +16,6 @@
     --font-base: var(--font-sans);
     --font-display: var(--font-transitional);
 
-    --font-size-00: .5rem;
-    --font-size-0: .75rem;
-    --font-size-1: 1rem;
-    --font-size-2: 1.1rem;
-    --font-size-3: 1.25rem;
-    --font-size-4: 1.5rem;
-    --font-size-5: 2rem;
-    --font-size-6: 2.5rem;
-    --font-size-7: 3rem;
-    --font-size-8: 3.5rem;
-
     /* Fluid typography sizes */
     --font-size-fluid-0: clamp(.75rem, 1.5vw, 1rem);
     --font-size-fluid-1: clamp(1rem, 2vw, 1.5rem);
@@ -37,6 +26,21 @@
     --font-size-fluid-6: clamp(3.5rem, 18vw, 6.5rem);
     --font-size-fluid-7: clamp(4rem, 21vw, 7.5rem);
     --font-size-fluid-8: clamp(4.5rem, 24vw, 8.5rem);
+
+
+    /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+    --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+    --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+    --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+    --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+    --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+    --step-6: clamp(3.3592rem, 2.8691rem + 2.4507vw, 4.7684rem);
+    --step-7: clamp(4.0311rem, 3.36rem + 3.3555vw, 5.9605rem);
+
 
     --font-lineheight-00: .95;
     --font-lineheight-0: 1.1;

@@ -1,0 +1,153 @@
+/* 
+  Lite-YouTube Component Styling
+  
+  Integration with our sand-based theming system and Utopia spacing.
+  Provides clean, professional video embeds that match the design system.
+*/
+
+lite-youtube {
+  display: block;
+  margin-block: var(--space-m);
+  border-radius: var(--radius-s);
+  overflow: hidden;
+  background: var(--surface-2);
+
+  /* Clean, flat design that matches our aesthetic */
+  --lite-youtube-frame-shadow-visible: no;
+  --lite-youtube-aspect-ratio: 16 / 9;
+
+  /* Smooth transitions for interactions */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for better interactivity */
+lite-youtube:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 8px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 5%)),
+    0 8px 16px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 2%));
+}
+
+/* Theme-specific adjustments */
+:where([data-theme="dark"], [data-theme="dim"]) lite-youtube {
+  background: var(--surface-3);
+  /* Slightly reduce brightness for dark themes */
+  filter: brightness(0.95) contrast(1.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root lite-youtube {
+    background: var(--surface-3);
+    filter: brightness(0.95) contrast(1.05);
+  }
+}
+
+/* Container integration - full width within content areas */
+.prose lite-youtube,
+.container lite-youtube,
+.grid lite-youtube {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: 0;
+}
+
+/* Special styling for hero sections or featured videos */
+.hero lite-youtube,
+lite-youtube[data-featured="true"] {
+  margin-block: var(--space-l);
+  --lite-youtube-aspect-ratio: 21 / 9;
+  /* Cinematic aspect ratio */
+  border: 2px solid var(--brand);
+}
+
+/* Compact variant for sidebars or smaller spaces */
+lite-youtube[data-size="compact"] {
+  margin-block: var(--space-s);
+  --lite-youtube-aspect-ratio: 4 / 3;
+}
+
+/* Square format for social media content */
+lite-youtube[data-size="square"] {
+  --lite-youtube-aspect-ratio: 1 / 1;
+}
+
+/* Vertical format for mobile/stories content */
+lite-youtube[data-size="vertical"] {
+  --lite-youtube-aspect-ratio: 9 / 16;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+/* Focus styling for accessibility */
+lite-youtube:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* Loading state styling */
+lite-youtube:not([style*="background-image"]) {
+  background: linear-gradient(45deg,
+      var(--surface-2) 25%,
+      var(--surface-3) 25%,
+      var(--surface-3) 50%,
+      var(--surface-2) 50%,
+      var(--surface-2) 75%,
+      var(--surface-3) 75%);
+  background-size: 20px 20px;
+  animation: loading-shimmer 1s linear infinite;
+}
+
+@keyframes loading-shimmer {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 20px 20px;
+  }
+}
+
+/* Integration with flow spacing */
+.flow lite-youtube {
+  margin-block: var(--flow-space, var(--space-m));
+}
+
+/* Grid layout optimization */
+.grid lite-youtube {
+  align-self: stretch;
+  height: auto;
+}
+
+/* Print styles - show fallback link */
+@media print {
+  lite-youtube {
+    border: 1px solid var(--text-2);
+    padding: var(--space-s);
+    background: var(--surface-1);
+  }
+
+  lite-youtube::after {
+    content: "Video: " attr(videotitle) " - https://youtube.com/watch?v=" attr(videoid);
+    display: block;
+    font-size: var(--step--1);
+    color: var(--text-2);
+    text-align: center;
+    padding-block-start: var(--space-xs);
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  lite-youtube {
+    transition: none;
+  }
+
+  lite-youtube:hover {
+    transform: none;
+  }
+
+  lite-youtube:not([style*="background-image"]) {
+    animation: none;
+    background: var(--surface-2);
+  }
+}

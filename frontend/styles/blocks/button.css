@@ -1,33 +1,34 @@
 button,
 .button {
-  --button-bg: var(--surface-1);
-  --button-text: var(--text-1);
+  --button-bg: var(--brand);
+  --button-text: var(--color-light);
   --button-x-padding: 2em;
   --button-y-padding: 1.1em;
   --button-gutter: 0.5ch;
   --focus-color: var(--color-primary);
   --button-border-width: 2px;
-  --button-border-color: var(--text-2, transparent);
+  --button-border-color: var(--brand, transparent);
 
   display: inline-flex;
   gap: var(--button-gutter);
   align-items: center;
   line-height: var(--leading-flat);
   position: relative;
-  border: none;
+  border: var(--stroke-width) solid var(--surface-4);
+  border-radius: var(--radius-s);
   cursor: pointer;
   background: var(--button-bg);
   color: var(--button-text);
   padding: var(--button-y-padding) var(--button-x-padding);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: var(--uppercase-kerning);
   text-decoration: none;
-  font-size: var(--font-size-fluid-0);
+  font-size: var(--step--1);
   font-weight: var(--font-weight-6);
   border: var(--button-border-width) solid var(--button-border-color);
 }
 
-button,
+button:hover,
 .button:hover {
   filter: brightness(105%);
 }
@@ -38,10 +39,22 @@ button:active,
 }
 
 /* Variant exceptions */
-button[data-button-variant='secondary'],
-.button[data-button-variant='secondary'] {
-  --button-bg: var(--surface-4);
-  --button-text: var(--text-1);
+button[data-variant='secondary'],
+.button[data-variant='secondary'] {
+  --button-bg: var(--surface-1);
+  --button-text: var(--text-2);
   --focus-color: var(--surface-2);
-  --button-border-color: var(--text-2);
+  --button-border-color: var(--brand);
+}
+
+/* TODO: add a `disabled' state/variant */
+button:disabled {
+  --button-bg: var(--surface-3);
+  --button-text: var(--text-2);
+  --button-border-color: var(--surface-4);
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  filter: none;
 }

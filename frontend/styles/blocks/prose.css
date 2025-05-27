@@ -1,7 +1,7 @@
 /* to make long-form content as readable as possible */
 
 .prose {
-  --flow-space: var(--size-fluid-2);
+  --flow-space: var(--space-m);
   --container-max-width: var(--wrapper-md);
 }
 
@@ -16,27 +16,27 @@
 }
 
 .prose :is(h1, h2, h3, h4)+*:not([class]) {
-  --flow-space: var(--size-fluid-2);
+  --flow-space: var(--space-l);
 }
 
 /* Add more space on and around figures and tables */
 .prose :is(figure, table),
 .prose :is(figure, table)+* {
-  --flow-space: var(--size-fluid-4);
+  --flow-space: var(--space-l);
 }
 
 /* Add more space to headings on block start */
 .prose *+ :is(h1, h2, h3, h4):not([class]) {
-  --flow-space: var(--size-fluid-4);
+  --flow-space: var(--space-xl);
 }
 
 .prose :is(ul, ol):not([class]) li+li,
 .prose :is(ul, ol):not([class]) li> :is(ol, ul) {
-  --flow-space: var(--size-fluid-1);
+  --flow-space: var(--space-s);
 }
 
 .prose hr {
-  --flow-space: var(--size-fluid-3);
+  --flow-space: var(--space-l);
 }
 
 .prose :is(img, picture, video) {

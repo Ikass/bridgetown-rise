@@ -1,119 +1,43 @@
-
-/* CONTAINER 
-  Horizontally centered
-  Customizable max width, default of 90rem or 1440px.
-*/
-
-.container {
-  display: block;
-  margin-inline: auto;
-  padding-inline: var(--gutter);
-  padding-block: var(--padding-block, 1.5rem);
-  max-inline-size: var(--container-max-width, 85rem);
-}
-
-.container > header > hgroup {
+.section-header {
   text-align: center;
-  padding-block: var(--size-fluid-2, 1rem);
 }
 
-.hero .container {
-  --container-max-width: var(--wrapper-lg);
-  text-align: left;
-}
-
-.container .prose {
-  --container-max-width: var(--wrapper-md);
-}
-
-.container > .container {
-  padding-inline: 0;
-}
-
-
-/* GRID */
-
-.grid {
-  /* --grid-min-item-size: var(--size-fluid-9); */
-  display: grid;
-  grid-template-columns: var(--grid-layout-columns,
-                        repeat(var(--grid-placement, auto-fit),
-                        minmax(var(--grid-min-item-size, 20rem), 1fr)));
-  gap: var(--grid-gutter, 1.5rem);
-  max-inline-size: var(--grid-max-width, 85rem);
-  align-items: var(--grid-alignment, start);
+/* need to limit paragraph length */
+.section-header p {
+  max-width: var(--size-content-3);
   margin-inline: auto;
-  background-color: var(--grid-bg-color);
 }
 
-.grid > :is(img, picture, video, figure) {
-  justify-self: center;
-}
-
-.posts .grid {
-  --grid-placement: auto-fill;
-}
-
-.grid[data-layout="50-50"] {
-  --grid-min-item-size: clamp(16rem, 50vw, 26rem);
-  --grid-placement: auto-fit;
-}
-
-
-/* PAGINATION */
-
-.container#pagination {
-  padding-block: 0;
-}
-
-ul.pagination {
-  display: flex;
-  justify-content: center;
-  gap: var(--size-fluid-2);
-  padding: 0;
-  margin: 0;
-}
-
-ul.pagination>li {
-  list-style: none;
-  margin: 0;
-}
-
-ul.pagination > li.pagination-left {
-  grid-area: left;
-  justify-self: right;
-}
-
-ul.pagination > li.pagination-right {
-  grid-area: right;
-  justify-self: left;
+header > hgroup > p {
+  --flow-space: var(--space-2xs);
+  max-width: var(--size-content-3);
 }
 
 
 /* TODO: add `lite-vimeo` */
-lite-youtube, lite-vimeo {
+lite-youtube,
+lite-vimeo {
   aspect-ratio: 16 / 9;
 }
 
 /* CARD */
-
 article {
   display: flex;
   flex-direction: column;
   align-self: stretch;
-  gap: var(--gutter);
+  gap: var(--space-m-l);
   box-shadow: var(--shadow-4);
-  padding: var(--gutter);
+  padding: var(--space-s);
   background-color: var(--surface-2);
+}
+article > .article-body {
+  flex: 1;
 }
 
 .section-label {
-  font-size: var(--font-size-fluid-0);
+  font-size: var(--step--1);
   text-transform: uppercase;
   font-weight: var(--font-weight-7);
   color: var(--brand);
 }
 
-.home .grid {
-  --grid-gutter: var(--size-fluid-4);
-}
