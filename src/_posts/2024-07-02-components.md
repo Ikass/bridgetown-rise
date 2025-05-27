@@ -1,7 +1,6 @@
 ---
 title: Components
 description: What components should be made and how
-image:
 date: 2024-07-02 06:00:00 +0300
 categories: todo
 ---

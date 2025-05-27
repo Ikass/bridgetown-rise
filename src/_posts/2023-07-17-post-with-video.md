@@ -1,6 +1,5 @@
 ---
 title: "Post with Video"
-image: 
 date: 2023-07-17 15:35:48 +0300
 categories: updates
 ---

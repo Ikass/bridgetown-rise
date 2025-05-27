@@ -3,6 +3,8 @@ layout: post
 title:  "The Art of Typography in Web Design"
 date:   2025-05-27 16:30:00 +0300
 categories: features
+image: stylized-illustration-ruby-desk-laptop
+image_alt: Red ruby gemstone on wooden desk next to laptop with code in background
 ---
 
 Typography is the cornerstone of effective web design, shaping how users perceive and interact with your content. In this comprehensive guide, we'll explore the principles of typographic hierarchy and demonstrate how fluid typography scales beautifully across all devices.

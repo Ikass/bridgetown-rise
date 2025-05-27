@@ -1,7 +1,6 @@
 ---
 title: "Post with Some Code"
 description: Description of a blog post with some code.
-image:
 date: 2023-07-17 13:56:48 +0300
 categories: updates
 ---

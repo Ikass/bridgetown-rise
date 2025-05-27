@@ -3,10 +3,14 @@
 /* ************************ */
 
 body > footer {
-    --region-space: var(--size-fluid-4);
+    --region-space: var(--space-m-l);
     background: var(--surface-2);
     color: var(--text-1);
     font-size: var(--font-size-fluid-0);
+}
+
+body > footer nav {
+    --flow-space: var(--space-xs);
 }
 
 body > footer nav > ul > li {
@@ -26,7 +30,7 @@ body footer > footer {
 body>footer nav#social ul {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--size-fluid-1);
+    gap: var(--space-xs);
 }
 
 body > footer #social a {
@@ -50,4 +54,3 @@ body>footer nav.flow h3 {
 body>footer .flow>*+* {
     margin-top: var(--flow-space, 1rem);
 }
-

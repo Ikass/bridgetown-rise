@@ -1,6 +1,5 @@
 ---
-title: "Your First Post on Bridgetown"
-image: 
+title: "Your First Post on Bridgetown" 
 date: 2023-05-30 15:31:48 +0300
 categories: updates
 ---

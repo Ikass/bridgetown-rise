@@ -11,11 +11,15 @@ paginate:
     <% paginator.resources.each do |post| %>
       <article class="card">     
         <header>
-          <img
-            slot="image"
-            src="<%= post.data.image || 'https://placehold.co/778x438?text=Hello+Ruby' %>"
-            alt="Placeholder image wth the text 'Hello Ruby'."
-          />
+          <picture>
+            <source srcset="/images/<%= post.data.image %>-600w.webp 600w,
+                            /images/<%= post.data.image %>-1200w.webp 1200w" 
+                            type="image/webp">
+            <source srcset="/images/<%= post.data.image %>-600w.jpg 600w,
+                            /images/<%= post.data.image %>-1200w.jpg 1200w"
+                            type="image/jpeg">
+            <img src="images/<%= post.data.image %>-1200w.jpg" width="1200" height="806" loading="lazy" alt="<%= post.data.image_alt %>">
+          </picture>
         </header>
         <div class="article-body">
           <h2><%= post.data.title %></h2>
