@@ -28,6 +28,8 @@ Bridgetown.configure do |config|
   #
   # timezone "America/Los_Angeles"
 
+  encoding "utf-8"
+
   # Add collection pagination features to your site. Documentation here:
   # https://www.bridgetownrb.com/docs/content/pagination
   #
